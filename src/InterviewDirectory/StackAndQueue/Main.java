@@ -100,17 +100,54 @@ public class Main {
         //System.out.println(num7);
 
 
-        Stack<Integer> s =new Stack<>();
-        s.push(1);
-        s.push(2);
-        s.push(1);
-        s.push(5);
-        s.push(4);
-        s.push(3);
-        ReverseStack stack =new ReverseStack();
-        stack.reverse(s);
-        while (!s.empty())
-            System.out.println(s.pop());
+        //Stack<Integer> s =new Stack<>();
+        //s.push(1);
+        //s.push(2);
+        //s.push(1);
+        //s.push(5);
+        //s.push(4);
+        //s.push(3);
+        //ReverseStack stack =new ReverseStack();
+        //stack.reverse(s);
+        //while (!s.empty())
+        //    System.out.println(s.pop());
 
+
+        //Pet d1 = new Dog();
+        //Pet d2 = new Dog();
+        //Pet c1 = new Cat();
+        //Pet d3 = new Dog();
+        //Pet c2 = new Cat();
+        //Pet d4 = new Dog();
+        //Pet d5 = new Dog();
+        //Pet c3 = new Cat();
+        //
+        //DogCatQueue dogcat = new DogCatQueue();
+        //dogcat.add(d1);
+        //dogcat.add(d2);
+        //dogcat.add(c1);
+        //dogcat.add(d3);
+        //dogcat.add(c2);
+        //dogcat.add(d4);
+        //dogcat.add(d5);
+        //dogcat.add(c3);
+        //dogcat.PollCat();
+        //dogcat.PollCat();
+        //dogcat.PollCat();
+        //boolean r1= dogcat.isCatQueueEmpty();
+        //System.out.println(r1);
+        //dogcat.PollDog();
+        //dogcat.PollDog();
+        //dogcat.PollDog();
+        //dogcat.PollDog();
+        //dogcat.PollDog();
+        //boolean r2 = dogcat.isDogQueueEmpty();
+        //System.out.println(r2);
+        //boolean r3 = dogcat.isEmpty();
+        //System.out.println(r3);
+        ////dogcat.pollAll();
+        ////System.out.println(dogcat.isEmpty());
+
+        
     }
 }
