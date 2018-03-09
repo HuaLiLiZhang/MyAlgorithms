@@ -4,6 +4,7 @@ import sun.awt.SunHints.Value;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Created by huali on 2018/3/9.
@@ -74,29 +75,42 @@ public class Main {
         //int s6= stack.pop1();
         //System.out.println(s6);
 
-        TwoStackQueue que= new TwoStackQueue();
-        que.add(1);
-        que.add(3);
-        que.add(5);
-        int num = que.peek();
-        int num1 = que.poll();
-        //System.out.println(num);
-        System.out.println(num1);
-        que.add(6);
-        que.add(91);
-        que.add(100);
-        int num2 = que.peek();
-        int num3 = que.poll();
-        //System.out.println(num2);
-        System.out.println(num3);
-        int num4 = que.poll();
-        System.out.println(num4);
-        int num5 = que.poll();
-        System.out.println(num5);
-        int num6 = que.poll();
-        System.out.println(num6);
-        int num7 = que.poll();
-        System.out.println(num7);
+        //TwoStackQueue que= new TwoStackQueue();
+        //que.add(1);
+        //que.add(3);
+        //que.add(5);
+        //int num = que.peek();
+        //int num1 = que.poll();
+        ////System.out.println(num);
+        //System.out.println(num1);
+        //que.add(6);
+        //que.add(91);
+        //que.add(100);
+        //int num2 = que.peek();
+        //int num3 = que.poll();
+        ////System.out.println(num2);
+        //System.out.println(num3);
+        //int num4 = que.poll();
+        //System.out.println(num4);
+        //int num5 = que.poll();
+        //System.out.println(num5);
+        //int num6 = que.poll();
+        //System.out.println(num6);
+        //int num7 = que.poll();
+        //System.out.println(num7);
+
+
+        Stack<Integer> s =new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(1);
+        s.push(5);
+        s.push(4);
+        s.push(3);
+        ReverseStack stack =new ReverseStack();
+        stack.reverse(s);
+        while (!s.empty())
+            System.out.println(s.pop());
 
     }
 }
