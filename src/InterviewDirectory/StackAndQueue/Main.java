@@ -148,6 +148,18 @@ public class Main {
         ////dogcat.pollAll();
         ////System.out.println(dogcat.isEmpty());
 
+        Stack<Integer> s =new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(1);
+        s.push(5);
+        s.push(4);
+        s.push(3);
+        sortStackByStack s1= new sortStackByStack();
+        s1.stacksort(s);
+        while (!s.isEmpty())
+            System.out.println(s.pop());
+
 
     }
 }
