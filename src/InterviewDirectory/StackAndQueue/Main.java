@@ -164,8 +164,13 @@ public class Main {
         String mid="mid";
         String right = "right";
         hannoiProblem1_digui hanoi =new hannoiProblem1_digui();
-        int step = hanoi.hanoiproblem(5,left,mid,right);
+        int step = hanoi.hanoiproblem(2,left,mid,right);
         System.out.println(step);
+
+        hanoiProblem2 hanoi1= new hanoiProblem2();
+        int step1 = hanoi1.hanoiProblem(2,left,mid,right);
+        System.out.println(step1);
+
 
 
     }
