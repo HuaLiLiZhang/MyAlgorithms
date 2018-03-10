@@ -148,17 +148,24 @@ public class Main {
         ////dogcat.pollAll();
         ////System.out.println(dogcat.isEmpty());
 
-        Stack<Integer> s =new Stack<>();
-        s.push(1);
-        s.push(2);
-        s.push(1);
-        s.push(5);
-        s.push(4);
-        s.push(3);
-        sortStackByStack s1= new sortStackByStack();
-        s1.stacksort(s);
-        while (!s.isEmpty())
-            System.out.println(s.pop());
+        //Stack<Integer> s =new Stack<>();
+        //s.push(1);
+        //s.push(2);
+        //s.push(1);
+        //s.push(5);
+        //s.push(4);
+        //s.push(3);
+        //sortStackByStack s1= new sortStackByStack();
+        //s1.stacksort(s);
+        //while (!s.isEmpty())
+        //    System.out.println(s.pop());
+
+        String left="left";
+        String mid="mid";
+        String right = "right";
+        hannoiProblem1_digui hanoi =new hannoiProblem1_digui();
+        int step = hanoi.hanoiproblem(5,left,mid,right);
+        System.out.println(step);
 
 
     }
