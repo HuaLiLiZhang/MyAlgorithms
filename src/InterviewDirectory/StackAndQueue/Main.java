@@ -1,7 +1,5 @@
 package InterviewDirectory.StackAndQueue;
 
-import sun.awt.SunHints.Value;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -173,12 +171,17 @@ public class Main {
         //System.out.println(step1);
 
 
-        int [] arr={4,3,5,4,3,3,6,7};
-        MaxInWindows max = new MaxInWindows();
-        //ArrayList<Integer> list = max.maxinwindows(arr,3);
-        //System.out.println(list);
-        int[] res = max.maxwindows(arr,3);
-        System.out.println(Arrays.toString(res));
+        //int [] arr={4,3,5,4,3,3,6,7};
+        //MaxInWindows max = new MaxInWindows();
+        ////ArrayList<Integer> list = max.maxinwindows(arr,3);
+        ////System.out.println(list);
+        //int[] res = max.maxwindows(arr,3);
+        //System.out.println(Arrays.toString(res));
+
+        //int [] arr = {3,4,5,2,1};
+        int[]arr={4,5,6};
+        TreeNode head = new getMaxTree().getmaxtree(arr);
+        System.out.println(head.val);
 
     }
 }
