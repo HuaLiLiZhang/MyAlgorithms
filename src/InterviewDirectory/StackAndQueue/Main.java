@@ -2,6 +2,7 @@ package InterviewDirectory.StackAndQueue;
 
 import sun.awt.SunHints.Value;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
@@ -160,18 +161,24 @@ public class Main {
         //while (!s.isEmpty())
         //    System.out.println(s.pop());
 
-        String left="left";
-        String mid="mid";
-        String right = "right";
-        hannoiProblem1_digui hanoi =new hannoiProblem1_digui();
-        int step = hanoi.hanoiproblem(2,left,mid,right);
-        System.out.println(step);
+        //String left="left";
+        //String mid="mid";
+        //String right = "right";
+        //hannoiProblem1_digui hanoi =new hannoiProblem1_digui();
+        //int step = hanoi.hanoiproblem(2,left,mid,right);
+        //System.out.println(step);
+        //
+        //hanoiProblem2 hanoi1= new hanoiProblem2();
+        //int step1 = hanoi1.hanoiProblem(2,left,mid,right);
+        //System.out.println(step1);
 
-        hanoiProblem2 hanoi1= new hanoiProblem2();
-        int step1 = hanoi1.hanoiProblem(2,left,mid,right);
-        System.out.println(step1);
 
-
+        int [] arr={4,3,5,4,3,3,6,7};
+        MaxInWindows max = new MaxInWindows();
+        //ArrayList<Integer> list = max.maxinwindows(arr,3);
+        //System.out.println(list);
+        int[] res = max.maxwindows(arr,3);
+        System.out.println(Arrays.toString(res));
 
     }
 }
