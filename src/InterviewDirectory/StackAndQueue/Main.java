@@ -179,9 +179,12 @@ public class Main {
         //System.out.println(Arrays.toString(res));
 
         //int [] arr = {3,4,5,2,1};
-        int[]arr={4,5,6};
-        TreeNode head = new getMaxTree().getmaxtree(arr);
-        System.out.println(head.val);
+        //int[]arr={4,5,6};
+        //TreeNode head = new getMaxTree().getmaxtree(arr);
+        //System.out.println(head.val);
 
+        int[][] map ={{1,0,1,1},{1,1,1,1},{1,1,1,0}};
+        int maxArea = new maxRecSize().maxrecsize(map);  //6
+        System.out.println(maxArea);
     }
 }
