@@ -218,14 +218,16 @@ public class Main {
         n1.next=n2;
         n2.next=n3;
         n3.next=n4;
-        n4.next=null;
-        node h = new reversePartList().reversepart(head,2,4);
-        while (h!=null)
-        {
-            System.out.println(h.val);
-            h=h.next;
-        }
+        n4.next=head;
+        //node h = new reversePartList().reversepart(head,2,4);
+        //while (h!=null)
+        //{
+        //    System.out.println(h.val);
+        //    h=h.next;
+        //}
 
+        node one =new CircleList().josephusKilll(head,3);
+        System.out.println(one.val);
 
 
 
