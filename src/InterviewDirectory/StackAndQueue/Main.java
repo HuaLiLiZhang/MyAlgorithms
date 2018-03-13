@@ -183,8 +183,15 @@ public class Main {
         //TreeNode head = new getMaxTree().getmaxtree(arr);
         //System.out.println(head.val);
 
-        int[][] map ={{1,0,1,1},{1,1,1,1},{1,1,1,0}};
-        int maxArea = new maxRecSize().maxrecsize(map);  //6
-        System.out.println(maxArea);
+        //int[][] map ={{1,0,1,1},{1,1,1,1},{1,1,1,0}};
+        //int maxArea = new maxRecSize().maxrecsize(map);  //6
+        //System.out.println(maxArea);
+
+        String_intern s=new String_intern();
+        s.intern1();
+
+
+
+
     }
 }
