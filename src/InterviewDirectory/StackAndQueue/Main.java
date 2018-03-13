@@ -190,6 +190,25 @@ public class Main {
         //String_intern s=new String_intern();
         //s.intern1();
 
+        //node head =new node(1);
+        //node n1 =new node(2);
+        //node n2 =new node(3);
+        //node n3 =new node(4);
+        //node n4 =new node(5);
+        //head.next=n1;
+        //n1.next=n2;
+        //n2.next=n3;
+        //n3.next=n4;
+        //n4.next=null;
+        //
+        //reverseList list = new reverseList() ;
+        //node pre = list.reverselist(head);
+        //System.out.println(pre.val);
+        //int []arr = {1,7,3,6,9,0,2,5,4};
+        //int num = new getNumInarray().getNum(arr,3);
+        //System.out.println(num);
+
+
         node head =new node(1);
         node n1 =new node(2);
         node n2 =new node(3);
@@ -200,10 +219,12 @@ public class Main {
         n2.next=n3;
         n3.next=n4;
         n4.next=null;
-
-        reverseList list = new reverseList() ;
-        node pre = list.reverselist(head);
-        System.out.println(pre.val);
+        node h = new reversePartList().reversepart(head,2,4);
+        while (h!=null)
+        {
+            System.out.println(h.val);
+            h=h.next;
+        }
 
 
 
