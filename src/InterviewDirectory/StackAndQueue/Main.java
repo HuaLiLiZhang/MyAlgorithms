@@ -209,16 +209,16 @@ public class Main {
         //System.out.println(num);
 
 
-        node head =new node(1);
-        node n1 =new node(2);
-        node n2 =new node(3);
-        node n3 =new node(4);
-        node n4 =new node(5);
-        head.next=n1;
-        n1.next=n2;
-        n2.next=n3;
-        n3.next=n4;
-        n4.next=head;
+        //node head =new node(1);
+        //node n1 =new node(2);
+        //node n2 =new node(3);
+        //node n3 =new node(4);
+        //node n4 =new node(5);
+        //head.next=n1;
+        //n1.next=n2;
+        //n2.next=n3;
+        //n3.next=n4;
+        //n4.next=head;
         //node h = new reversePartList().reversepart(head,2,4);
         //while (h!=null)
         //{
@@ -226,8 +226,26 @@ public class Main {
         //    h=h.next;
         //}
 
-        node one =new CircleList().josephusKilll(head,3);
-        System.out.println(one.val);
+        //node one =new CircleList().josephusKilll(head,3);
+        //System.out.println(one.val);
+
+
+
+        node head =new node(1);
+        node n1 =new node(2);
+        node n2 =new node(3);
+        node n3 =new node(3);
+        node n4 =new node(1);
+        head.next=n1;
+        n1.next=n2;
+        n2.next=n3;
+        n3.next=n4;
+        n4.next=null;
+        boolean yesno = new isHuiWenlist().isPalindrome3(head);
+        System.out.println(yesno);
+
+
+
 
 
 
