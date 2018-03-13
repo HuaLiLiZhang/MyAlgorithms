@@ -22,12 +22,3 @@ public class removeMidNode
         return head;
     }
 }
-class node
-{
-    node next;
-    int val;
-    node(int val)
-    {
-        this.val=val;
-    }
-}

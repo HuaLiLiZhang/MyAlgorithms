@@ -187,8 +187,23 @@ public class Main {
         //int maxArea = new maxRecSize().maxrecsize(map);  //6
         //System.out.println(maxArea);
 
-        String_intern s=new String_intern();
-        s.intern1();
+        //String_intern s=new String_intern();
+        //s.intern1();
+
+        node head =new node(1);
+        node n1 =new node(2);
+        node n2 =new node(3);
+        node n3 =new node(4);
+        node n4 =new node(5);
+        head.next=n1;
+        n1.next=n2;
+        n2.next=n3;
+        n3.next=n4;
+        n4.next=null;
+
+        reverseList list = new reverseList() ;
+        node pre = list.reverselist(head);
+        System.out.println(pre.val);
 
 
 
