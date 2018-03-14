@@ -231,19 +231,26 @@ public class Main {
 
 
 
-        node head =new node(1);
-        node n1 =new node(2);
-        node n2 =new node(3);
-        node n3 =new node(3);
+        node head =new node(9);
+        node n1 =new node(0);
+        node n2 =new node(4);
+        node n3 =new node(5);
         node n4 =new node(1);
         head.next=n1;
         n1.next=n2;
         n2.next=n3;
         n3.next=n4;
         n4.next=null;
-        boolean yesno = new isHuiWenlist().isPalindrome3(head);
-        System.out.println(yesno);
+        //boolean yesno = new isHuiWenlist().isPalindrome3(head);
+        //System.out.println(yesno);
 
+        listPartition1 list = new listPartition1();
+        node hh = list.listpartition(head,3);
+        while (hh!=null)
+        {
+            System.out.println(hh.val);
+            hh=hh.next;
+        }
 
 
 
