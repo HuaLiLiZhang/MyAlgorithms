@@ -30,5 +30,5 @@ public class treeNode_prePosMidsort {
         posOrderRecur(root.right);
         System.out.print(root.val+" ");
     }
-     
+
 }
