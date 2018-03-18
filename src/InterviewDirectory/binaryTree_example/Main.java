@@ -1,5 +1,6 @@
 package InterviewDirectory.binaryTree_example;
 
+
 /**
  * Created by huali on 2018/3/16.
  */
@@ -27,15 +28,16 @@ public class Main {
         r5.right = null;
         r6.left = null;
         r6.right = null;
+        //
+        //binaryTree_search_no_digui tree = new binaryTree_search_no_digui();
+        //tree.preorderUnRecur(root);
+        //tree.inOrderUnRecur(root);
+        //tree.posOrderUnREcur(root);
+        //tree.posOrderUnrecur2(root);
 
-        binaryTree_search_no_digui tree = new binaryTree_search_no_digui();
-        tree.preorderUnRecur(root);
-        tree.inOrderUnRecur(root);
-        tree.posOrderUnREcur(root);
-        tree.posOrderUnrecur2(root);
 
-
-
+        printTreeEdge1 print = new printTreeEdge1();
+        print.printEdge(root);
 
     }
 }
