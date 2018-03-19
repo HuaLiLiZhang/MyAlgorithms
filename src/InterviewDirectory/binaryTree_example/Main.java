@@ -44,10 +44,17 @@ public class Main {
         FabioNanum fi = new FabioNanum();
         int num = fi.f1(8);
         int num2 = fi.f2(8);
-        int num3 = fi.f3(8);
+        int num3 = fi.f3(6);
         System.out.println(num);
         System.out.println(num2);
         System.out.println(num3);
+
+        int s1 = fi.s1(5);
+        int s2 = fi.s2(5);
+        int s3 = fi.s3(6);
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
 
     }
 }

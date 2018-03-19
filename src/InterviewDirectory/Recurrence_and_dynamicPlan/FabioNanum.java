@@ -48,7 +48,7 @@ public class FabioNanum {
         return res[0][0]+res[1][0];
     }
     //计算矩阵m 的p次方,时间复杂度为：O(logN) ，10的75次方= 10^64+10^8+10^2+10^1,75的二进制位：1001011；
-    //                                                      =75的二进制为1 的位数。
+    //                                                =75的二进制为1 的位数。
     public int [][] matrixPower(int[][]m,int p)
     {
         int[][]res = new int [m.length][m[0].length];
@@ -67,7 +67,7 @@ public class FabioNanum {
         return res;
     }
 
-    public int[][]muliMatrix(int[][]m1,int[][]m2)
+    public int[][]muliMatrix(int[][]m1,int[][]m2)   //二维矩阵的乘法
     {
         int[][]res = new int  [m1.length][m2[0].length];
         for(int i = 0;i<m1.length;++i)
@@ -82,4 +82,49 @@ public class FabioNanum {
         }
         return res;
     }
+
+
+    //台阶问题
+    //时间复杂度为：O(2^n) ，暴力递归
+    public int s1(int n)
+    {
+        if(n<=0)
+            return 0;
+        if(n==1||n==2)
+            return n;
+        return f1(n-1)+f1(n-2);
+    }
+
+    //O(N)方法： 从当前结点往下加
+    public int s2(int n)
+    {
+        if(n<=0)
+            return 0;
+        if(n==1||n==2)
+            return n;
+        int res = 2;  //当前值
+        int pre = 1;  //前一个值。
+        int tmp = 0;
+        for(int i = 3;i<=n;++i)
+        {
+            tmp = res;
+            res = res+pre;
+            pre = tmp;
+        }
+        return res;
+    }
+
+
+    public int s3(int n)
+    {
+        if(n<1)
+            return 0;
+        if(n==1||n==2)
+            return n;
+        int [][]base = {{1,1},{1,0}};
+        int [][]res = matrixPower(base ,n-3);
+        return 2*res[0][0]+res[1][0];   //n=2,sn=2;n=1,sn=1;
+    }
+
+
 }
