@@ -4,6 +4,7 @@ package InterviewDirectory.Recurrence_and_dynamicPlan;
  * Created by huali on 2018/3/19.
  */
 public class mincoins1 {
+    //完全背包：可以重复。
     //时间复杂度为O(Nxaim) ,空间复杂度为：O(Nxaim)
     public int minCoins1(int []arr,int aim)
     {
