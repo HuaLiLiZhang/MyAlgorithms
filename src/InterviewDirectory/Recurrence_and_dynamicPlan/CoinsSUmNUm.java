@@ -65,7 +65,7 @@ public class CoinsSUmNUm {
         return res;
     }
 
-//动态规划 , 生成N行，aim+1列的dp，动态规划，
+//动态规划 , 生成N行，aim+1列的dp，动态规划，时间复杂度为：O(Nxaim^2)
 // 先看第0列，筹够0元，需要的钱只要一种方法。所以dp[i][0]都为1，
 // 再看第0列，只有第一张钱arr[0]时候，筹够1-aim的方法数，只有是arr[0]的倍数，
 // dp[0][arr[0]*j]=1,j=0 到arr[0]*j<=aim为止。
@@ -102,4 +102,34 @@ public class CoinsSUmNUm {
         return dp[arr.length-1][aim];
 
     }
+
+    //动态规划，时间复杂度：O(Nxaim):从用一张到用k张arr[i]货币，dp[i-1][j-arr[i]*k]相当于：dp[i][j-arr[i]]
+    //所以dp[i][j] = dp[i-1][j]+dp[i][j-arr[i]]
+    public int coins(int[]arr, int aim)
+    {
+        if(arr==null||arr.length ==0||aim<0)
+            return 0;
+
+        int[][]dp = new int[arr.length][aim+1];
+        for(int i =0;i<arr.length;++i)
+        {
+            dp[i][0]=1;
+        }
+        for(int j=1;arr[0]*j<aim;++j)
+        {
+            dp[0][arr[0]*j] = 1;
+        }
+        for(int i =1;i<arr.length;++i)
+        {
+            for(int j=1;j<=aim;++j)
+            {
+                dp[i][j]=dp[i-1][j];
+                dp[i][j]+=j-arr[i]>=0?dp[i][j-arr[i]]:0;
+            }
+        }
+        return dp[arr.length-1][aim];
+    }
+
+
+    
 }
