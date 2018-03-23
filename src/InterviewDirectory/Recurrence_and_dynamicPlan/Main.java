@@ -1,5 +1,7 @@
 package InterviewDirectory.Recurrence_and_dynamicPlan;
 
+import java.util.Arrays;
+
 /**
  * Created by huali on 2018/3/19.
  */
@@ -27,11 +29,17 @@ public class Main {
         //int num01$1 = minCoins3.minCoin(arr,31);
         //System.out.println(num01$1);
 
-        int[]arr = {5, 10, 25, 1};
-        CoinsSUmNUm coinnum = new CoinsSUmNUm();
-        int num = coinnum.coins1(arr, 15);
-        System.out.println(num);
-        int num2 = coinnum.coins2(arr, 15);
-        System.out.println(num2);
+        //int[]arr = {5, 10, 25, 1};
+        //CoinsSUmNUm coinnum = new CoinsSUmNUm();
+        //int num = coinnum.coins1(arr, 15);
+        //System.out.println(num);
+        //int num2 = coinnum.coins2(arr, 15);
+        //System.out.println(num2);
+
+        int []arr1 = {2,1,5,3,6,4,8,9,7};
+        int []list1 = new generateLIS().list1(arr1);
+        System.out.println(Arrays.toString(list1));
+        int []list2 = new generateLIS().list2(arr1);
+        System.out.println(Arrays.toString(list2));
     }
 }

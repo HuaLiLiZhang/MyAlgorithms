@@ -53,4 +53,46 @@ public class generateLIS {
         }
         return list1;
     }
+
+
+
+
+    public int[] getdp2(int[]arr)
+    {
+        int[]dp = new int [arr.length]; //记录的某个位置处，前面有多少个顺序的子序列。
+        int[]ends = new int[arr.length];  //
+        ends[0] = arr[0];
+        dp[0] = 1;
+        int right = 0;
+        int l = 0;
+        int r = 0;
+        int m = 0;
+        for(int i=1;i<arr.length;i++)
+        {
+            l = 0;
+            r = right;
+            while (l<=r)
+            {
+                m = (l+r)/2;
+                if(arr[i]>ends[m])
+                {
+                    l = m+1;
+                }else{
+                    r = m-1;
+                }
+            }
+            right = Math.max(right, l);
+            ends[l]= arr[i];
+            dp[i] = l+1;
+        }
+        return dp;
+    }
+
+    public int[] list2(int[]arr)
+    {
+        if(arr==null||arr.length==0)
+            return null;
+        int []dp = getdp2(arr);
+        return generateLIS(arr,dp);
+    }
 }
