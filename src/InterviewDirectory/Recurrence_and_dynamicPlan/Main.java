@@ -36,10 +36,13 @@ public class Main {
         //int num2 = coinnum.coins2(arr, 15);
         //System.out.println(num2);
 
-        int []arr1 = {2,1,5,3,6,4,8,9,7};
-        int []list1 = new generateLIS().list1(arr1);
-        System.out.println(Arrays.toString(list1));
-        int []list2 = new generateLIS().list2(arr1);
-        System.out.println(Arrays.toString(list2));
+        //int []arr1 = {2,1,5,3,6,4,8,9,7};
+        //int []list1 = new generateLIS().list1(arr1);
+        //System.out.println(Arrays.toString(list1));
+        //int []list2 = new generateLIS().list2(arr1);
+        //System.out.println(Arrays.toString(list2));
+
+        hanoi  han= new hanoi();
+        han.hannoi1(2);
     }
 }
