@@ -1,5 +1,6 @@
 package InterviewDirectory.Recurrence_and_dynamicPlan;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -42,7 +43,19 @@ public class Main {
         //int []list2 = new generateLIS().list2(arr1);
         //System.out.println(Arrays.toString(list2));
 
-        hanoi  han= new hanoi();
-        han.hannoi1(2);
+        //hanoi  han= new hanoi();
+        //han.hannoi1(2);
+
+        String str1 = "A2BDC";
+        String str2 = "AB2CD";
+        getdp_long_common_array getmax = new getdp_long_common_array();
+        //String res = getmax.lcse(str1,str2);
+        //System.out.println(res);
+        //System.out.println(res.substring(0, 3));
+        String str11= "bebcd";
+        String str22 = "abcde";
+        String res =new theLOngSubString().lcst2(str11,str22);
+        System.out.println(res);
+
     }
 }
