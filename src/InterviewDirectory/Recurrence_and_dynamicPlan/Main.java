@@ -57,11 +57,19 @@ public class Main {
         //String res =new theLOngSubString().lcst2(str11,str22);
         //System.out.println(res);
 
-        String str1 ="ab12cd3";
-        String str2 = "abcdf";
-        int num = new minCost_twoStr().mincost1(str1,str2,5,3,2);
-        System.out.println(num);
-        int num1 = new minCost_twoStr().minCost(str1,str2,5,3,2);
-        System.out.println(num1);
+        //String str1 ="ab12cd3";
+        //String str2 = "abcdf";
+        //int num = new minCost_twoStr().mincost1(str1,str2,5,3,2);
+        //System.out.println(num);
+        //int num1 = new minCost_twoStr().minCost(str1,str2,5,3,2);
+        //System.out.println(num1);
+
+        String str1 = "AB";
+        String str2 = "12";
+        String aim = "AB12";
+        boolean result = new strIsCross1().isCross1(str1,str2,aim);
+        boolean result1 = new strIsCross1().isCross2(str1,str2,aim);
+        System.out.println(result);
+        System.out.println(result1);
     }
 }
