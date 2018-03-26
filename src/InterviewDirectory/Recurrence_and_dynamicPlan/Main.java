@@ -64,12 +64,16 @@ public class Main {
         //int num1 = new minCost_twoStr().minCost(str1,str2,5,3,2);
         //System.out.println(num1);
 
-        String str1 = "AB";
-        String str2 = "12";
-        String aim = "AB12";
-        boolean result = new strIsCross1().isCross1(str1,str2,aim);
-        boolean result1 = new strIsCross1().isCross2(str1,str2,aim);
-        System.out.println(result);
-        System.out.println(result1);
+        //String str1 = "AB";
+        //String str2 = "12";
+        //String aim = "AB12";
+        //boolean result = new strIsCross1().isCross1(str1,str2,aim);
+        //boolean result1 = new strIsCross1().isCross2(str1,str2,aim);
+        //System.out.println(result);
+        //System.out.println(result1);
+
+        int [][]map = {{-2,-3,3},{-5,-10,1},{0,30,-5}};
+        int num = new MinHp1().minHP1(map);
+        System.out.println(num);
     }
 }
