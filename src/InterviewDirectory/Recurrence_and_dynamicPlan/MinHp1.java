@@ -25,12 +25,47 @@ public class MinHp1 {
             {
                 right = Math.max(dp[i][j+1]-map[i][j],1);
                 down = Math.max(dp[i+1][j]-map[i][j],1);
-                dp[i][j] = Math.max(right ,down);
+                dp[i][j] = Math.min(right ,down);
             }
 
         }
         return dp[0][0];
     }
 
+    public int minHp2(int [][]map)
+    {
+        if(map==null||map.length==0||map[0]==null||map[0].length==0)
+            return 1;
+        int more = Math.max(map.length,map[0].length);
+        int less= Math.min(map.length,map[0].length);
+        boolean rowmore =more== map.length;
 
+        int []dp = new int[less];
+        int tmp = map[map.length-1][map[0].length-1];
+        dp[less-1] = tmp>0?1:-tmp+1;
+
+        int row = 0;
+        int col = 0;
+
+        for(int i = less-2;i>=0;i--)
+        {
+            row = rowmore?more -1:i;
+            col = rowmore?i:more-1;
+            dp[i] = Math.max(dp[i+1]-map[row][col],1);
+        }
+        for(int i=more-2;i>=0;i--)
+        {
+            row = rowmore?i:less-1;
+            col = rowmore?less-1:i;
+            dp[less-1] = Math.max(dp[less-1]-map[row][col],1);
+            for(int j = less -2;j>=0;j--)
+            {
+                row = rowmore?i:j;
+                col = rowmore?j:i;
+                dp[j] = Math.min(Math.max(dp[j]-map[row][col],1),Math.max(dp[j+1]-map[row][col],1));
+            }
+        }
+        return dp[0];
+
+    }
 }

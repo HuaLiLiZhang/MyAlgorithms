@@ -75,5 +75,7 @@ public class Main {
         int [][]map = {{-2,-3,3},{-5,-10,1},{0,30,-5}};
         int num = new MinHp1().minHP1(map);
         System.out.println(num);
+        int num2 = new MinHp1().minHp2(map);
+        System.out.println(num2);
     }
 }
