@@ -46,16 +46,22 @@ public class Main {
         //hanoi  han= new hanoi();
         //han.hannoi1(2);
 
-        String str1 = "A2BDC";
-        String str2 = "AB2CD";
-        getdp_long_common_array getmax = new getdp_long_common_array();
-        //String res = getmax.lcse(str1,str2);
+        //String str1 = "A2BDC";
+        //String str2 = "AB2CD";
+        //getdp_long_common_array getmax = new getdp_long_common_array();
+        ////String res = getmax.lcse(str1,str2);
+        ////System.out.println(res);
+        ////System.out.println(res.substring(0, 3));
+        //String str11= "bebcd";
+        //String str22 = "abcde";
+        //String res =new theLOngSubString().lcst2(str11,str22);
         //System.out.println(res);
-        //System.out.println(res.substring(0, 3));
-        String str11= "bebcd";
-        String str22 = "abcde";
-        String res =new theLOngSubString().lcst2(str11,str22);
-        System.out.println(res);
 
+        String str1 ="ab12cd3";
+        String str2 = "abcdf";
+        int num = new minCost_twoStr().mincost1(str1,str2,5,3,2);
+        System.out.println(num);
+        int num1 = new minCost_twoStr().minCost(str1,str2,5,3,2);
+        System.out.println(num1);
     }
 }
