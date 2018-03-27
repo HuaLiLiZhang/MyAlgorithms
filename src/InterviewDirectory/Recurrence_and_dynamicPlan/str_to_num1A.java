@@ -4,6 +4,7 @@ package InterviewDirectory.Recurrence_and_dynamicPlan;
  * Created by huali on 2018/3/27.
  */
 public class str_to_num1A {
+    //时间复杂度是O(2^n)  ，空间复杂度：用户函数递归调用，栈的消耗：O(N)。
     public int num1(String str)
     {
         if(str==null||str.length()==0)
@@ -23,7 +24,7 @@ public class str_to_num1A {
         return res;
     }
 
-
+    //时间复杂度是O(N)，额外空间复杂度是：O(1)。
     public int num2(String str)
     {
         if(str==null||str.length()==0)
