@@ -72,10 +72,17 @@ public class Main {
         //System.out.println(result);
         //System.out.println(result1);
 
-        int [][]map = {{-2,-3,3},{-5,-10,1},{0,30,-5}};
-        int num = new MinHp1().minHP1(map);
+        //int [][]map = {{-2,-3,3},{-5,-10,1},{0,30,-5}};
+        //int num = new MinHp1().minHP1(map);
+        //System.out.println(num);
+        //int num2 = new MinHp1().minHp2(map);
+        //System.out.println(num2);
+
+        String str = "1111";
+        int num = new str_to_num1A().num1(str);
         System.out.println(num);
-        int num2 = new MinHp1().minHp2(map);
-        System.out.println(num2);
+        //int num1 = new str_to_num1A().num2(str);
+        //System.out.println(num1);
+
     }
 }
