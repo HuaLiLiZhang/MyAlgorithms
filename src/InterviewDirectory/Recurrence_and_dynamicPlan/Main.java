@@ -81,8 +81,8 @@ public class Main {
         String str = "1111";
         int num = new str_to_num1A().num1(str);
         System.out.println(num);
-        //int num1 = new str_to_num1A().num2(str);
-        //System.out.println(num1);
+        int num1 = new str_to_num1A().num2(str);
+        System.out.println(num1);
 
     }
 }
