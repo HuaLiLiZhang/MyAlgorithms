@@ -78,11 +78,16 @@ public class Main {
         //int num2 = new MinHp1().minHp2(map);
         //System.out.println(num2);
 
-        String str = "1111";
-        int num = new str_to_num1A().num1(str);
-        System.out.println(num);
-        int num1 = new str_to_num1A().num2(str);
-        System.out.println(num1);
+        //String str = "1111";
+        //int num = new str_to_num1A().num1(str);
+        //System.out.println(num);
+        //int num1 = new str_to_num1A().num2(str);
+        //System.out.println(num1);
 
+        String str="1^0|0|1";
+        boolean desired = false;
+        str_01_boolean strn = new str_01_boolean();
+        int num0 = strn.str_01_num1(str, desired);
+        System.out.println(num0);
     }
 }
