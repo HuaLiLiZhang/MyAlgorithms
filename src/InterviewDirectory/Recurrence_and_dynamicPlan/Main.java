@@ -89,5 +89,7 @@ public class Main {
         str_01_boolean strn = new str_01_boolean();
         int num0 = strn.str_01_num1(str, desired);
         System.out.println(num0);
+        int num1 = strn.num2(str, desired);
+        System.out.println(num1);
     }
 }
