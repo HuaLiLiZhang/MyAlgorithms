@@ -84,12 +84,19 @@ public class Main {
         //int num1 = new str_to_num1A().num2(str);
         //System.out.println(num1);
 
-        String str="1^0|0|1";
-        boolean desired = false;
-        str_01_boolean strn = new str_01_boolean();
-        int num0 = strn.str_01_num1(str, desired);
-        System.out.println(num0);
-        int num1 = strn.num2(str, desired);
+        //String str="1^0|0|1";
+        //boolean desired = false;
+        //str_01_boolean strn = new str_01_boolean();
+        //int num0 = strn.str_01_num1(str, desired);
+        //System.out.println(num0);
+        //int num1 = strn.num2(str, desired);
+        //System.out.println(num1);
+
+
+        int arr [] = {1,2,100,4};
+        int num1 = new getArr_win1().win1(arr);
         System.out.println(num1);
+        int num2 = new getArr_win1().win2(arr);
+        System.out.println(num2);
     }
 }
