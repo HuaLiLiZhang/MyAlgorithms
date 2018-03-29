@@ -93,10 +93,14 @@ public class Main {
         //System.out.println(num1);
 
 
-        int arr [] = {1,2,100,4};
-        int num1 = new getArr_win1().win1(arr);
-        System.out.println(num1);
-        int num2 = new getArr_win1().win2(arr);
-        System.out.println(num2);
+        //int arr [] = {1,2,100,4};
+        //        //int num1 = new getArr_win1().win1(arr);
+        //        //System.out.println(num1);
+        //        //int num2 = new getArr_win1().win2(arr);
+        //        //System.out.println(num2);
+
+        int []arr={3,2,3,1,1,4};
+        int num = new jumpNumLest().jump1(arr);
+        System.out.println(num);
     }
 }
