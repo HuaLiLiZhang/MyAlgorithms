@@ -89,6 +89,8 @@ public class Stack1_getMin {
     public int pop1()
     {
         if(this.stackData.isEmpty())
+        throw new RuntimeException("you dataStack is empty!");
+        if(this.stackData.empty())
             throw new RuntimeException("you dataStack is empty!");
         this.stackData.pop();
         return this.stackMin.pop();
