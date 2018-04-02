@@ -24,7 +24,8 @@ public class Nqueue {
             if(isValid(record, i,j))
             {
                 record[i]=j;
-                res+=process1(i+1, record, n);
+                res+=process1(i+1, record, n);   //i+1, 每行每行的验证就不会出现同行的冲突，
+                // 然后解决同列，同一个斜线
             }
         }
         return res;

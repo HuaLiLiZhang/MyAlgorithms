@@ -109,10 +109,10 @@ public class Main {
         //System.out.println(result);
 
         Nqueue queuq = new Nqueue();
-        int num1 = queuq.num1(8);
+        int num1 = queuq.num1(4);
         System.out.println(num1);
 
-        int num2 = queuq.num2(8);
+        int num2 = queuq.num2(4);
         System.out.println(num2);
 
     }
