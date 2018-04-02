@@ -99,8 +99,13 @@ public class Main {
         //        //int num2 = new getArr_win1().win2(arr);
         //        //System.out.println(num2);
 
-        int []arr={3,2,3,1,1,4};
-        int num = new jumpNumLest().jump1(arr);
-        System.out.println(num);
+        //int []arr={3,2,3,1,1,4};
+        //int num = new jumpNumLest().jump1(arr);
+        //System.out.println(num);
+
+        int []arr = {100,4, 200, 2,3,1};
+        longestConsecutive longest = new longestConsecutive();
+        int result = longest.longestConse(arr);
+        System.out.println(result);
     }
 }
