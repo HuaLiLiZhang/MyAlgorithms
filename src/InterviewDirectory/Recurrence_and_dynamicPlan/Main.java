@@ -103,17 +103,17 @@ public class Main {
         //int num = new jumpNumLest().jump1(arr);
         //System.out.println(num);
 
-        //int []arr = {100,4, 200, 2,3,1};
-        //longestConsecutive longest = new longestConsecutive();
-        //int result = longest.longestConse(arr);
-        //System.out.println(result);
+        int []arr = {100,4, 200, 2,1,3};
+        longestConsecutive longest = new longestConsecutive();
+        int result = longest.longestConse(arr);
+        System.out.println(result);
 
-        Nqueue queuq = new Nqueue();
-        int num1 = queuq.num1(4);
-        System.out.println(num1);
-
-        int num2 = queuq.num2(4);
-        System.out.println(num2);
+        //Nqueue queuq = new Nqueue();
+        //int num1 = queuq.num1(4);
+        //System.out.println(num1);
+        //
+        //int num2 = queuq.num2(4);
+        //System.out.println(num2);
 
     }
 }
