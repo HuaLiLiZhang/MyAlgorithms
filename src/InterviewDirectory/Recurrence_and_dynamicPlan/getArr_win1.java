@@ -20,6 +20,7 @@ public class getArr_win1 {
         if(i==j)
             return arr[i];
         return Math.max(arr[i]+s(arr, i+1,j), arr[j]+s(arr, i,j-1));
+        //在取了arr[i]，或者arr[j]，第一个取的时候都会保证，后一个在取i+1,j  和i，j-1的之后取最大值。
     }
 
     public int s(int []arr, int i, int j)
@@ -27,6 +28,7 @@ public class getArr_win1 {
         if(i==j)
             return 0;
         return Math.min(f(arr, i+1,j), f(arr, i,j-1));
+        //后者在取得时候，肯定会让第一个取得人下一次取得的数最小，即i+1,j和i，j-1
     }
 
 
