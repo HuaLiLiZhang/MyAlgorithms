@@ -6,6 +6,9 @@ package InterviewDirectory.StringProblem;
 public class Main {
     public static void main(String []args)
     {
+        System.out.println(Integer.MIN_VALUE/10);
+        System.out.println(Integer.MIN_VALUE%10);
+
         String a = "123";
         String b = "312";
         isRotation is = new isRotation();
