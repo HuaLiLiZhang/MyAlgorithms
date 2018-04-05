@@ -24,9 +24,11 @@ public class Main {
         //System.out.println(Arrays.toString(arr));
 
         quicksort insert = new quicksort();
-        insert.quicksort(arr,0,arr.length-1);
-        System.out.println(Arrays.toString(arr));
+        //insert.quicksort(arr,0,arr.length-1);
+        //System.out.println(Arrays.toString(arr));
         insert.quicksort2(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+        insert.quicksort3(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
 
 

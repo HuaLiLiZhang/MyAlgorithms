@@ -6,7 +6,7 @@ package InterviewDirectory.tenth_sortalgorithm;
  */
 public class quicksort {
     //快速排序
-    // 快速排序是不稳定的，其时间平均时间复杂度是O(nlgn)。最坏的复杂度是O(N^2)，空间复杂度是O(logn)
+    // 快速排序是不稳定的，其时间平均时间复杂度是O(nlogn)。最坏的复杂度是O(N^2)，空间复杂度是O(logn)
     //基本思想：（分治）
     //
     //先从数列中取出一个数作为key值；
@@ -76,5 +76,50 @@ public class quicksort {
         }
         arr[l] = temp;
         return l;
+    }
+
+
+
+
+    //另外一种快速排序
+    //另一种实现划分的思路是先从左到右扫描一个比基准数大的元素，
+    // 再从右到左扫描一个比基准数小的元素（左右两个指针i、j滑动），
+    // 然后交换这两个元素，重复操作直到两指针相遇，
+    // 然后将基准元素arr[left]与左子序列最后的元素arr[j]进行交换即可，用代码描述为：
+
+    public int partition1(int arr[] ,int left ,int right)
+    {
+        int i = left+1, j = right;
+        int temp = arr[left];
+        while (i<j) {
+            while (arr[i] < temp && i < right) {
+                i++;
+            }
+            while (arr[j] > temp && j >left) {
+                j--;
+            }
+            if (i >= j)
+                break;
+            swap(arr, i, j);
+        }
+        swap(arr,left, j);
+        return j;
+    }
+
+
+    public void quicksort3(int []arr, int left, int right)
+    {
+        if(arr==null||arr.length==0||left>=right)
+            return ;
+        int pivot = partition1(arr, left, right);
+        quicksort(arr, left, pivot-1);
+        quicksort(arr, pivot+1, right);
+    }
+
+    public void swap(int[]arr, int a,int b)
+    {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }
