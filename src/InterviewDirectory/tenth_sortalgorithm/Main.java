@@ -31,13 +31,17 @@ public class Main {
         //insert.quicksort3(arr,0,arr.length-1);
         //System.out.println(Arrays.toString(arr));
 
-        heapSort heap = new heapSort();
-        heap.heapsort(arr);
-        System.out.println(Arrays.toString(arr));
+        //heapSort heap = new heapSort();
+        //heap.heapsort(arr);
+        //System.out.println(Arrays.toString(arr));
+        //
+        //Shellsort shell = new Shellsort();
+        //shell.shellsort(arr);
+        //System.out.println(Arrays.toString(arr));
 
-        Shellsort shell = new Shellsort();
-        shell.shellsort(arr);
-        System.out.println(Arrays.toString(arr));
+        //MergeSort mergeSort = new MergeSort();
+        //mergeSort.mergesort(arr);
+        //System.out.println(Arrays.toString(arr));
 
 
     }
