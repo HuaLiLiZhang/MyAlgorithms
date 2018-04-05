@@ -19,8 +19,14 @@ public class Main {
         //select.selectsort1(arr);
         //System.out.println(Arrays.toString(arr));
 
-        sample_insertSort insert = new sample_insertSort();
-        insert.insertsort1(arr);
+        //sample_insertSort insert = new sample_insertSort();
+        //insert.insertsort1(arr);
+        //System.out.println(Arrays.toString(arr));
+
+        quicksort insert = new quicksort();
+        insert.quicksort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+        insert.quicksort2(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
 
 
