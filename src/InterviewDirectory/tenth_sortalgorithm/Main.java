@@ -8,15 +8,19 @@ import java.util.Arrays;
 public class Main {
     public static void main(String []args)
     {
-        bubble_sort bubble = new bubble_sort();
+        //bubble_sort bubble = new bubble_sort();
         int []arr = {3,5,2,7,6,1,10};
         //bubble.bubblesort(arr);
         //System.out.println(Arrays.toString(arr));
         //bubble.bubblesort2(arr);
-        //        //System.out.println(Arrays.toString(arr));
+        //System.out.println(Arrays.toString(arr));
 
-        sample_selectSort select = new sample_selectSort();
-        select.selectsort1(arr);
+        //sample_selectSort select = new sample_selectSort();
+        //select.selectsort1(arr);
+        //System.out.println(Arrays.toString(arr));
+
+        sample_insertSort insert = new sample_insertSort();
+        insert.insertsort1(arr);
         System.out.println(Arrays.toString(arr));
 
 

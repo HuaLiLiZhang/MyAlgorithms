@@ -6,6 +6,11 @@ package InterviewDirectory.tenth_sortalgorithm;
 public class sample_selectSort {
     //简单选择排序。时间复杂度是：O(N^2) ，空间复杂度是：O(1)
     //选取最小的和未排序的第一个交换。
+    //基本思想：
+    //在长度为N的无序数组中，第一次遍历n-1个数，找到最小的数值与第一个元素交换；
+    //第二次遍历n-2个数，找到最小的数值与第二个元素交换；
+    //。。。
+    //第n-1次遍历，找到最小的数值与第n-1个元素交换，排序完成。
     public void selectsort1(int[]arr)
     {
         if(arr==null||arr.length==0)
