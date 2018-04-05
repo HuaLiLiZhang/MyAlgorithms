@@ -10,10 +10,15 @@ public class Main {
     {
         bubble_sort bubble = new bubble_sort();
         int []arr = {3,5,2,7,6,1,10};
-        bubble.bubblesort(arr);
+        //bubble.bubblesort(arr);
+        //System.out.println(Arrays.toString(arr));
+        //bubble.bubblesort2(arr);
+        //        //System.out.println(Arrays.toString(arr));
+
+        sample_selectSort select = new sample_selectSort();
+        select.selectsort1(arr);
         System.out.println(Arrays.toString(arr));
-        bubble.bubblesort2(arr);
-        System.out.println(Arrays.toString(arr));
+
 
 
     }
