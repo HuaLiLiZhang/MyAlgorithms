@@ -44,5 +44,9 @@ public class Main {
         //System.out.println(Arrays.toString(arr));
 
 
+        CountSort count1 = new CountSort();
+        count1.countSort1(arr);
+        System.out.println(Arrays.toString(arr));
+
     }
 }
