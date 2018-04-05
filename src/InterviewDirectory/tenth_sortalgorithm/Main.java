@@ -44,9 +44,14 @@ public class Main {
         //System.out.println(Arrays.toString(arr));
 
 
-        CountSort count1 = new CountSort();
-        count1.countSort1(arr);
-        System.out.println(Arrays.toString(arr));
+        //CountSort count1 = new CountSort();
+        //count1.countSort1(arr);
+        //CountSort.countSort1(arr);  //静态方法可以直接用类名调用。
+        //System.out.println(Arrays.toString(arr));
+
+        //BucketSort.bucketSort(arr);//静态方法可以直接用类名调用。
+        //System.out.println(Arrays.toString(arr));
+
 
     }
 }
