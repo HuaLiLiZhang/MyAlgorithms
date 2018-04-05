@@ -12,6 +12,8 @@ public class Main {
         int []arr = {3,5,2,7,6,1,10};
         bubble.bubblesort(arr);
         System.out.println(Arrays.toString(arr));
+        bubble.bubblesort2(arr);
+        System.out.println(Arrays.toString(arr));
 
 
     }

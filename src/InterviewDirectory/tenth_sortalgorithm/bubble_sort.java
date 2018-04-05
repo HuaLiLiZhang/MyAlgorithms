@@ -10,6 +10,7 @@ public class bubble_sort {
     {
         if(arr==null||arr.length==0)
             return ;
+
         for(int i=0;i<arr.length;i++)
         {
             for(int j=arr.length-1;j>i;j--)
@@ -24,5 +25,25 @@ public class bubble_sort {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
+    }
+
+    //改进可以设置一个flag ，表示已经排序好，不需要在继续遍历，比较
+    public void bubblesort2(int []arr)
+    {
+        if(arr==null||arr.length==0)
+            return ;
+        boolean flag = true;
+        for(int i=0;i<arr.length&&flag;i++)
+        {
+            flag = false;
+            for(int j = arr.length-1;j>i;j--)
+            {
+                if(arr[j]<arr[j-1])
+                {
+                    flag = true;
+                    swap(arr, j,j-1);
+                }
+            }
+        }
     }
 }
