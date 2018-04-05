@@ -23,14 +23,21 @@ public class Main {
         //insert.insertsort1(arr);
         //System.out.println(Arrays.toString(arr));
 
-        quicksort insert = new quicksort();
+        //quicksort insert = new quicksort();
         //insert.quicksort(arr,0,arr.length-1);
         //System.out.println(Arrays.toString(arr));
-        insert.quicksort2(arr,0,arr.length-1);
-        System.out.println(Arrays.toString(arr));
-        insert.quicksort3(arr,0,arr.length-1);
+        //insert.quicksort2(arr,0,arr.length-1);
+        //System.out.println(Arrays.toString(arr));
+        //insert.quicksort3(arr,0,arr.length-1);
+        //System.out.println(Arrays.toString(arr));
+
+        heapSort heap = new heapSort();
+        heap.heapsort(arr);
         System.out.println(Arrays.toString(arr));
 
+        Shellsort shell = new Shellsort();
+        shell.shellsort(arr);
+        System.out.println(Arrays.toString(arr));
 
 
     }
