@@ -1,8 +1,6 @@
 package InterviewDirectory.StringProblem;
 
 
-import java.util.Arrays;
-
 /**
  * Created by huali on 2018/4/4.
  */
@@ -19,9 +17,13 @@ public class Main {
         //System.out.println(rotation);
 
         char[] crr = {'2','1','0','4','3','9','6','1','a'};
-        strtoint hep = new strtoint();
-        boolean is = hep.isUnique2(crr);
-        System.out.println(is);
-        System.out.println(Arrays.toString(crr));
+        //strtoint hep = new strtoint();
+        //boolean is = hep.isUnique2(crr);
+        //System.out.println(is);
+        //System.out.println(Arrays.toString(crr));
+
+        String[] strs = {"a","b",null, "b",null ,"c"};
+        int index = new strGetIndex().getIndex(strs, "d");
+        System.out.println(index);
     }
 }
