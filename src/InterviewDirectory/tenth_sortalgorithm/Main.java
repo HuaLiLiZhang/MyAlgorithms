@@ -9,7 +9,7 @@ public class Main {
     public static void main(String []args)
     {
         //bubble_sort bubble = new bubble_sort();
-        int []arr = {3,5,2,7,6,1,10};
+        int []arr = {3,5,2,7,6,1,10,9};
         //bubble.bubblesort(arr);
         //System.out.println(Arrays.toString(arr));
         //bubble.bubblesort2(arr);
@@ -34,6 +34,12 @@ public class Main {
         //heapSort heap = new heapSort();
         //heap.heapsort(arr);
         //System.out.println(Arrays.toString(arr));
+        char[] crr = {'2','1','0','4','3','9','6'};
+        heapsort1 hep = new heapsort1();
+        hep.heapsort(crr);
+        System.out.println(Arrays.toString(crr));
+
+
         //
         //Shellsort shell = new Shellsort();
         //shell.shellsort(arr);
@@ -51,6 +57,7 @@ public class Main {
 
         //BucketSort.bucketSort(arr);//静态方法可以直接用类名调用。
         //System.out.println(Arrays.toString(arr));
+
 
 
     }
