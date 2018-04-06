@@ -35,9 +35,10 @@ public class Main {
         //heap.heapsort(arr);
         //System.out.println(Arrays.toString(arr));
         char[] crr = {'2','1','0','4','3','9','6'};
-        heapsort1 hep = new heapsort1();
-        hep.heapsort(crr);
-        System.out.println(Arrays.toString(crr));
+        //heapsort1 hep = new heapsort1();
+        //hep.heapsort(crr);
+        //System.out.println(Arrays.toString(crr));
+
 
 
         //
