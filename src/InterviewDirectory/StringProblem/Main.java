@@ -31,8 +31,15 @@ public class Main {
         //String rel_str = palindrome1.getPalindrom1(str);
         //System.out.println(rel_str);
 
-        String str= "A1BC22DE1F";
-        String sp = "121";
-        System.out.println(new addLeastchar_toPalindrome1().getPalindrome2(str,sp));
+        //String str= "A1BC22DE1F";
+        //String sp = "121";
+        //System.out.println(new addLeastchar_toPalindrome1().getPalindrome2(str,sp));
+
+
+        //String str = "()(()()(";
+        //System.out.println(new MaxLength().maxlength(str));
+
+        String str = "48*((70-65)-43)+8*1";
+        System.out.println(new str_getValue().getValue(str));
     }
 }

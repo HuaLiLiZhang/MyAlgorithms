@@ -48,7 +48,7 @@ public class Nqueue {
         for(int k=0;k<i;k++)
         {
             //recore[k]里面存的是列的数值j，对于不同行的皇后，看是否有同一列的问题，没有则加入j。
-            if(j==record[k]||Math.abs(record[k]-j)==Math.abs(i-k))
+            if(j==record[k]||Math.abs(record[k]-j)==Math.abs(k-i))
                 return false;
         }
         return true;
