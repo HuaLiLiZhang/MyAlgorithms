@@ -42,20 +42,22 @@ public class Main {
         //String str = "48*((70-65)-43)+8*1";
         //System.out.println(new str_getValue().getValue(str));
 
-        Integer a = 1;
-        Integer b = 2;
-        Integer c = 3;
-        Integer d = 3;
-        Integer e = 321;
-        Integer f = 321;
-        Long g = 3L;
-        System.out.println(c==d);  //true
-        System.out.println(e==f);  //false
-        System.out.println(c==(a+b));  //true
-        System.out.println(c.equals(a+b));  //true
-        System.out.println(g==(a+b));  //true
-        System.out.println(g.equals(a+b));  //false
+        //Integer a = 1;
+        //Integer b = 2;
+        //Integer c = 3;
+        //Integer d = 3;
+        //Integer e = 321;
+        //Integer f = 321;
+        //Long g = 3L;
+        //System.out.println(c==d);  //true
+        //System.out.println(e==f);  //false
+        //System.out.println(c==(a+b));  //true
+        //System.out.println(c.equals(a+b));  //true
+        //System.out.println(g==(a+b));  //true
+        //System.out.println(g.equals(a+b));  //false
 
+        String[] strs = {"abc","ab","be"};
+        System.out.println(new LowestString().lowestString(strs));
 
     }
 }
