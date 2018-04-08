@@ -19,9 +19,9 @@ public class MaxUnique {
         int cur = 0;
         for(int i = 0;i<ch1.length;i++)
         {
-            pre = Math.max(pre , map[ch1[i]]);
-            cur = i - pre;
-            len = Math.max(len , cur);
+            pre = Math.max(pre , map[ch1[i]]);   //记住当前不重复的位置的开始
+            cur = i - pre;   //记录当前长度
+            len = Math.max(len , cur);  //记录最长的长度
             map[ch1[i]] = i;
         }
         return len;
