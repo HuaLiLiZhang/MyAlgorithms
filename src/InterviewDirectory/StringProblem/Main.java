@@ -56,8 +56,11 @@ public class Main {
         //System.out.println(g==(a+b));  //true
         //System.out.println(g.equals(a+b));  //false
 
-        String[] strs = {"abc","ab","be"};
-        System.out.println(new LowestString().lowestString(strs));
+        //String[] strs = {"abc","ab","be"};
+        //System.out.println(new LowestString().lowestString(strs));
 
+        String str = "abcabefg";
+        int num = new MaxUnique().maxunique(str);
+        System.out.println(num);
     }
 }
