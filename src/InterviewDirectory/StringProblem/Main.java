@@ -59,8 +59,16 @@ public class Main {
         //String[] strs = {"abc","ab","be"};
         //System.out.println(new LowestString().lowestString(strs));
 
-        String str = "abcabefg";
-        int num = new MaxUnique().maxunique(str);
-        System.out.println(num);
+        //String str = "abcabefg";
+        //int num = new MaxUnique().maxunique(str);
+        //System.out.println(num);
+
+
+        String str= "aaAACDEcBCg";
+        pointNewChar po = new pointNewChar();
+        System.out.println(po.pointnewchar1(str,7));
+        System.out.println(po.pointnewchar1(str,4));
+        System.out.println(po.pointnewchar1(str,10));
+
     }
 }
