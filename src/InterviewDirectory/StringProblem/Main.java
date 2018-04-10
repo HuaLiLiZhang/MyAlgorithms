@@ -74,5 +74,6 @@ public class Main {
         String str2 = "acb";
         int minlen = new strMinLength().minLength1(str1,str2);
         System.out.println(minlen);
+        System.out.println(Integer.MAX_VALUE);
     }
 }
