@@ -70,10 +70,14 @@ public class Main {
         //System.out.println(po.pointnewchar1(str,4));
         //System.out.println(po.pointnewchar1(str,10));
 
-        String str1 = "adbbca";
-        String str2 = "acb";
-        int minlen = new strMinLength().minLength1(str1,str2);
-        System.out.println(minlen);
-        System.out.println(Integer.MAX_VALUE);
+        //String str1 = "adbbca";
+        //String str2 = "acb";
+        //int minlen = new strMinLength().minLength1(str1,str2);
+        //System.out.println(minlen);
+        //System.out.println(Integer.MAX_VALUE);
+
+        String str = "ACDCDCDAD";
+        //str = "ABAB";
+        System.out.println(new mincut().nimcut1(str));
     }
 }
