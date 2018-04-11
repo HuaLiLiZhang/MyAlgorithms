@@ -39,11 +39,14 @@ public class trieOpp {
             index = words[i]-'a';
             if(node.map[index]==null)
             {
-                node.map[index] = new TrieNode();
+                node.map[index] = new TrieNode();//先插入结点
             }
             node = node.map[index];
+            //依此结点开始继续往下创建新节点，因为原来里面没有这个新的结点
+            //并将path++
             node.path++;
         }
+        //最终以此结尾的end结点++
         node.end++;
     }
     public void delete(String word)
