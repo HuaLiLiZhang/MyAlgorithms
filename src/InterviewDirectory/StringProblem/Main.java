@@ -80,12 +80,12 @@ public class Main {
         ////str = "ABAB";
         //System.out.println(new mincut().nimcut1(str));
 
-        //String str = "adcb";
-        //String exp = ".*";
+        String str = "adcb";
+        String exp = ".*b";
         //String str = "";
         //String exp = ".*";
-        String str = "";
-        String exp = "..*";
+        //String str = "";
+        //String exp = "..*";
         System.out.println(new IsMatch().Ismatch1(str,exp));
         System.out.println(new strIsmatch().isMacth(str, exp));
         System.out.println(new IsMatch().isMathc2(str, exp));
