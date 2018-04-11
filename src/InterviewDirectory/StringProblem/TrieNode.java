@@ -8,10 +8,10 @@ public class TrieNode {
     public int path ;
     public int end;
     public TrieNode[]map;
-    TrieNode(int path ,int end)
+    TrieNode()
     {
-        this.path=path;
-        this.end = end;
+        this.path=0;
+        this.end = 0;
         this.map = new TrieNode[26];
 
     }
