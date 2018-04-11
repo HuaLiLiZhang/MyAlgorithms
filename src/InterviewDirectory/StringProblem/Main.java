@@ -76,8 +76,18 @@ public class Main {
         //System.out.println(minlen);
         //System.out.println(Integer.MAX_VALUE);
 
-        String str = "ACDCDCDAD";
-        //str = "ABAB";
-        System.out.println(new mincut().nimcut1(str));
+        //String str = "ACDCDCDAD";
+        ////str = "ABAB";
+        //System.out.println(new mincut().nimcut1(str));
+
+        //String str = "adcb";
+        //String exp = ".*";
+        //String str = "";
+        //String exp = ".*";
+        String str = "";
+        String exp = "..*";
+        System.out.println(new IsMatch().Ismatch1(str,exp));
+        System.out.println(new strIsmatch().isMacth(str, exp));
+        System.out.println(new IsMatch().isMathc2(str, exp));
     }
 }
