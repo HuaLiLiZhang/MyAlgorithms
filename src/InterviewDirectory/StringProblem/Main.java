@@ -1,10 +1,14 @@
 package InterviewDirectory.StringProblem;
 
 
+import java.util.Vector;
+
 /**
  * Created by huali on 2018/4/4.
  */
 public class Main {
+    private static Vector<Integer> vector = new Vector<>() ;
+
     public static void main(String []args)
     {
         //System.out.println(Integer.MIN_VALUE/10);
@@ -80,14 +84,48 @@ public class Main {
         ////str = "ABAB";
         //System.out.println(new mincut().nimcut1(str));
 
-        String str = "adcb";
-        String exp = ".*b";
-        //String str = "";
-        //String exp = ".*";
-        //String str = "";
-        //String exp = "..*";
-        System.out.println(new IsMatch().Ismatch1(str,exp));
-        System.out.println(new strIsmatch().isMacth(str, exp));
-        System.out.println(new IsMatch().isMathc2(str, exp));
+        //String str = "adcb";
+        //String exp = ".*b";
+        ////String str = "";
+        ////String exp = ".*";
+        ////String str = "";
+        ////String exp = "..*";
+        //System.out.println(new IsMatch().Ismatch1(str,exp));
+        //System.out.println(new strIsmatch().isMacth(str, exp));
+        //System.out.println(new IsMatch().isMathc2(str, exp));
+
+        //vector是线程安全的，但是在多线程中，操作就不安全了
+        //
+        //while (true) {
+        //    for (int i = 0; i < 10; i++) {
+        //        vector.add(i);
+        //    }
+        //
+        //
+        //    Thread removethread = new Thread(new Runnable() {
+        //        @Override
+        //        public void run() {
+        //            for (int i = 0; i < vector.size(); i++) {
+        //                vector.remove(i);
+        //            }
+        //        }
+        //    });
+        //
+        //    Thread printthread = new Thread(new Runnable() {
+        //        @Override
+        //        public void run() {
+        //            for (int i = 0; i < vector.size(); i++) {
+        //                System.out.println(vector.get(i));
+        //            }
+        //        }
+        //    });
+        //
+        //
+        //
+        //    removethread.start();
+        //    printthread.start();
+        //
+        //    while (Thread.activeCount() > 20) ;
+        //}
     }
 }
