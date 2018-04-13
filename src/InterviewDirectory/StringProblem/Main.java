@@ -1,6 +1,7 @@
 package InterviewDirectory.StringProblem;
 
 
+import java.util.Hashtable;
 import java.util.Vector;
 
 /**
@@ -127,5 +128,9 @@ public class Main {
         //
         //    while (Thread.activeCount() > 20) ;
         //}
+
+        String str ="9fil13dj11P013jAsf11j13";
+        System.out.println(new max_sum_str().sum_str(str));
+
     }
 }
