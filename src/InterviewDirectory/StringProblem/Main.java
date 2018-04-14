@@ -1,6 +1,8 @@
 package InterviewDirectory.StringProblem;
 
 
+import InterviewDirectory.Alibaba.MIT_HAKMEM;
+
 import java.util.Hashtable;
 import java.util.Vector;
 
@@ -129,8 +131,12 @@ public class Main {
         //    while (Thread.activeCount() > 20) ;
         //}
 
-        String str ="9fil13dj11P013jAsf11j13";
-        System.out.println(new max_sum_str().sum_str(str));
+        //String str ="9fil13dj11P013jAsf11j13";
+        //System.out.println(new max_sum_str().sum_str(str));
+
+        MIT_HAKMEM.bitcount(55);
+        MIT_HAKMEM.countbyte(55);
+        MIT_HAKMEM.countbyte1(55);
 
     }
 }
