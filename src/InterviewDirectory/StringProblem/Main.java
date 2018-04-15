@@ -140,7 +140,8 @@ public class Main {
         //MIT_HAKMEM.countbyte1(55);
 
         String str = "absdfksdABCDABDEFGsdg";
-        String mp = "ABCDABDEFG";
+        //String mp = "ABCDABDEFG";
+        String mp = "bebea";
         System.out.println(new KMPalgorithm().ViolentMatch(str, mp));
         System.out.println(new KMPalgorithm().KMP(str, mp));
 
