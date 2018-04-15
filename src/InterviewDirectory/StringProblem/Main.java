@@ -139,9 +139,10 @@ public class Main {
         //MIT_HAKMEM.countbyte(55);
         //MIT_HAKMEM.countbyte1(55);
 
-        String str = "absdfksdhfgsdg";
-        String mp = "fksdh";
+        String str = "absdfksdABCDABDEFGsdg";
+        String mp = "ABCDABDEFG";
         System.out.println(new KMPalgorithm().ViolentMatch(str, mp));
+        System.out.println(new KMPalgorithm().KMP(str, mp));
 
     }
 }
