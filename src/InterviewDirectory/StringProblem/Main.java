@@ -3,6 +3,7 @@ package InterviewDirectory.StringProblem;
 
 import InterviewDirectory.Alibaba.MIT_HAKMEM;
 import InterviewDirectory.Alibaba.deleteElement;
+import InterviewDirectory.Tencent.constructed_huiwenStr;
 
 import java.util.Hashtable;
 import java.util.Vector;
@@ -139,11 +140,13 @@ public class Main {
         //MIT_HAKMEM.countbyte(55);
         //MIT_HAKMEM.countbyte1(55);
 
-        String str = "absdfksdABCDABDEFGsdg";
-        //String mp = "ABCDABDEFG";
-        String mp = "bebea";
-        System.out.println(new KMPalgorithm().ViolentMatch(str, mp));
-        System.out.println(new KMPalgorithm().KMP(str, mp));
+        //String str = "absdfksdABCDABDEFGsdg";
+        ////String mp = "ABCDABDEFG";
+        //String mp = "bebea";
+        //System.out.println(new KMPalgorithm().ViolentMatch(str, mp));
+        //System.out.println(new KMPalgorithm().KMP(str, mp));
 
+        String str = "zgtklhfzomzjckwmluvivvcmhjrwkuvcjrxojobpdedpamdshcwwsetfbacvonecrdvugeibglvhxuymjvoryqjwullvzglqazxrdmczyvbgakjagttrezmvrlptiwoqkrtxuroeqmryzsgokopxxdpbejmtwvpnaqrgqladdszhdwxfckmewhdvihgvacueqhvwvjxoitlpfrckxkuksaqzjpwgoldyhugsacflcdqhifldoaphgdbhaciixouavqxwlghadmfortqacbffqzocinvuqpjthgekunjsstukeiffjipzzabkuiueqnjgkuiojwbjzfynafnlcaryygqjfixaoeowhkxkbsnpsvnbxuywfxbnuoemxynbtgkqtjvzqikbafjnpbeirxxrohhnjqrbqqzercqcrcswojyylunuevtdhamlkzqnjrzibwckbkiygysuaxpjrgjmurrohkhvjpmwmmtpcszpihcntyivrjplhyrqftghglkvqeidyhtmrlcljngeyaefxnywpfsualufjwnffyqnpitgkkyrbwccqggycrvoocbwsdbftkigrkcbojuwwctknzzmvhbhbfzrqwzllulbabztqnznkqdyoqnrxhwavqhzyzvmmmphzxbikpharseywpfsqyybkynwbdrgfsaxduxojcdqcjuaywzbvdjgjqtoffasiuhvxcaockebkuxpiomqmtvsqhnyxfjceqevqvnapbk";
+        System.out.println(new constructed_huiwenStr().deleteminNUm(str));
     }
 }
