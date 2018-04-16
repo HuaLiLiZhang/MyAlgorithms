@@ -27,7 +27,6 @@ public class char_move {
         {
             if(ch[i]>='A'&&ch[i]<='Z')
             {
-                int step = lastUp-i;
                 char temp = ch[i];
                 for(int j=i+1;j<=lastUp;j++)//平移一位
                 {
