@@ -14,7 +14,7 @@ public class sampleErrorlog {
     //3.输入的文件可能带路径，记录文件名称不能带路径
     public static  void main(String []args) {
         Scanner sr = new Scanner(System.in);
-        HashMap<String, Integer> map = new HashMap<>();  //LinkedHashMap
+        HashMap<String, Integer> map = new LinkedHashMap<>();  //LinkedHashMap
         do {
 
             String str = sr.next();
@@ -31,14 +31,14 @@ public class sampleErrorlog {
         sr.close();
         //对记录排序
         //对记录进行排序
-        List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(map.entrySet());
-        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-            //降序
+        List<Map.Entry<String ,Integer>> list = new LinkedList<>(map.entrySet());
+        Collections.sort(list, new Comparator<Entry<String, Integer>>() {
             @Override
-            public int compare(Entry<String, Integer> arg0, Entry<String, Integer> arg1) {
-                return (arg1.getValue() - arg0.getValue()) == 0 ? (arg0.getValue() - arg1.getValue()) : (arg1.getValue() - arg0.getValue());
+            public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+                return o1.getValue()-o2.getValue()==0? (o1.getValue()-o2.getValue()):(o2.getValue()-o1.getValue());
             }
         });
+
         //只输出前8条
         int m = 0;
         for (Map.Entry<String, Integer> mapping : list) {
