@@ -45,14 +45,16 @@ public class shotGame {
                             {
                                 int dx2 = x[r] -x[i];
                                 int dy2 = y[r] -y[i];
-                                if(dy1*dx2 == dy2*dx1)  //代表平行
+                                if(dy1*dx2 == dy2*dx1)  //代表平行,也就是跟x[i],y[i]，x[j]，y[j]在一条直线上
                                 {
                                     cnt++;
                                 }
                                 else {
                                     dx2 = x[r] - x[k];
                                     dy2 = y[r] - y[k];
-                                    if (dy1 * dy2 == -dx2 * dx1) //代表在垂直的那条线上。
+                                    if (dy1 * dy2 == -dx2 * dx1)
+                                        //如果不在一条直线上，看看是否在一条垂直线上，两个点r,k代表一条垂直线。
+                                        // 代表在垂直的那条线上。
                                     {
                                         cnt++;
                                     }
