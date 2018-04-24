@@ -42,11 +42,26 @@ public class togetherSing {
                 for(int i = 1;i<n;i++)
                 {
                     acc[i] = acc[i-1]+Math.abs(arr[i]-arr[i-1]);   //acc代表总难度增加总和。
+                    // //第一个人只唱了第i个音符，第二个人唱了【0，i-1】的音符，
+                    //所以第一个人难度为0，第二个人难度为【0，i-1】的累计难度，即acc[i-1]
                     dp[i][i-1] = acc[i-1];
                     for(int j=0;j<i-1;j++)
                     {
-                        dp[i][j] = dp[i-1][j] + acc[i] -acc[i-1];
+                        //链接：https://www.nowcoder.com/questionTerminal/fddf64d5757e41ec93f3ef0c0a10b891
+                        //来源：牛客网
+                        //
+                        //a:当 j=i-1 时 例如: dp[4][3]（3=4-1）
+                        // 则若小Q当前弹的是第4个音调，牛博士此前刚弹完的是第3个音调，
+                        // 那么小Q之前弹的音调的可能情况有：2、 1、 0  （或者一个也没弹）四种可能，
+                        // 那么dp[4][3]= min(dp[3][2],dp[3][1],dp[3][0]，一个音也没弹过)。
+                        //
+                        //b:当 j!=i-1时，则dp[i][j]一定是由dp[i-1][j]转移得到的，
+                        // 譬如说：dp[4][2] 一定是由dp[3][2] 转移得到的，因为牛博士此前刚弹完的是第2个音调，
+                        // 而小Q当前要弹的是第4个音调，那么小Q之前弹的音调一定是第3个音调。
+                        dp[i][j] = dp[i-1][j] + acc[i] -acc[i-1];//当j<i-1时
                         dp[i][i-1] = Math.min(dp[i][i-1], dp[i-1][j]+Math.abs(arr[i]-arr[j]));
+                        //当j=i-1的情况，用j代表之前公式中的k
+                        //不用再写一个for循环去遍历k找最小的难度，优化代码，就是思维有点跳跃
                     }
                 }
                 int min = Integer.MAX_VALUE;
