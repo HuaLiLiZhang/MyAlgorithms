@@ -109,7 +109,7 @@ public class putChess {
                     res[resI] = Math.min(res[resI], sum);
                     resI++;
                 }
-                System.out.println(Arrays.toString(res));
+                //System.out.println(Arrays.toString(res));
             }
         }
         return res;
