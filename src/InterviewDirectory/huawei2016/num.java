@@ -46,18 +46,18 @@ public static void main(String[] args){
 
         dfs(data,row,col,squ,0);
 
-        if(data[6][0]==2&&data[6][1]==1&&data[6][2]==3)
-        {
-            data[6][2]=5;data[6][3]=8;data[6][4]=4;
-            data[6][5]=6;data[6][6]=9;data[6][7]=7;
-            data[6][8]=3;
-            data[7][0]=9;data[7][1]=6;data[7][2]=3;
-            data[7][3]=7;data[7][4]=2;data[7][5]=1;
-            data[7][6]=5;data[7][7]=4;data[7][8]=8;
-            data[8][0]=8;data[8][1]=7;data[8][2]=4;
-            data[8][3]=3;data[8][4]=5;data[8][5]=9;
-            data[8][6]=1;data[8][7]=2;data[8][8]=6;
-        }
+        //if(data[6][0]==2&&data[6][1]==1&&data[6][2]==3)
+        //{
+        //    data[6][2]=5;data[6][3]=8;data[6][4]=4;
+        //    data[6][5]=6;data[6][6]=9;data[6][7]=7;
+        //    data[6][8]=3;
+        //    data[7][0]=9;data[7][1]=6;data[7][2]=3;
+        //    data[7][3]=7;data[7][4]=2;data[7][5]=1;
+        //    data[7][6]=5;data[7][7]=4;data[7][8]=8;
+        //    data[8][0]=8;data[8][1]=7;data[8][2]=4;
+        //    data[8][3]=3;data[8][4]=5;data[8][5]=9;
+        //    data[8][6]=1;data[8][7]=2;data[8][8]=6;
+        //}
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
                 if(j!=8)
