@@ -1,8 +1,6 @@
 package InterviewDirectory.netEASe2017;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by huali on 2018/5/8.
@@ -21,27 +19,57 @@ public class randomcard {
     //
     //输出例子1:
     //        1 4 2 5 3 6 1 5 4 3 2 6 1 1 1 1
+    //        1 4 2 5 3 6 1 5 4 3 2 6 1 1 1 1
 
     public static void main(String []args)
     {
         Scanner sr = new Scanner(System.in);
-        while (sr.hasNext())
+        //List<List<Integer>> sum = new ArrayList<>();
+        int groupnum = sr.nextInt();
+        while (groupnum>0)
         {
-            int groupnum = sr.nextInt();
-            for(int i=0;i<groupnum;i++)
+            int n = sr.nextInt();
+            int k = sr.nextInt();
+            List<Integer> list = new ArrayList<Integer>();
+            for(int j=0;j<2*n;j++)
             {
-                int n = sr.nextInt();
-                int k = sr.nextInt();
-                List<List<Integer>> list = new ArrayList<List<Integer>>();
-                for(int j=0;j<2*n;j++)
-                {
-                    for(int k0 = 0;k0<k;k++)
-                    {
-
-                    }
-                }
+               list.add(sr.nextInt());
             }
+            for(int j=0;j<k;j++)
+            {
+                list = reverList(list, n);
+            }
+            for(int i=0;i<list.size();i++)
+            {
+                System.out.print(list.get(i));
+                if(i!=list.size()-1)
+                    System.out.print(" ");
+            }
+            System.out.println();
+
+            groupnum--;
         }
         sr.close();
+    }
+
+    private static List<Integer> reverList(List<Integer> cards, int n)
+    {
+        List<Integer> leftCards = cards.subList(0,n);
+        List<Integer> rightCards = cards.subList(n,2*n);
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < n; i++)
+        {
+            result.add(rightCards.get(n-i-1));
+            result.add(leftCards.get(n-i-1));
+        }
+        for (int i = 0; i < n; i++)
+        {
+            int temp = result.get(i);
+            result.set(i,result.get(2 * n - i - 1));
+            result.set(2*n-i-1,temp);
+        }
+        //Collections.reverse(result);
+        return result;
+
     }
 }
