@@ -1,8 +1,6 @@
 package InterviewDirectory.FileWriter;
 
-        import java.io.BufferedWriter;
-        import java.io.FileWriter;
-        import java.io.IOException;
+        import java.io.*;
 
 /**
  * Created by huali on 2018/5/12.
@@ -18,10 +16,18 @@ public class BufferWriterDemo {
         BufferedWriter bufw = new BufferedWriter(fw);
 
         //    使用缓冲区的写入方法将数据先写入到缓冲区中。
-        bufw.write("abcdef");
+        bufw.write("abcdef\r\ngsdagdfg");
+        bufw.newLine();
+        bufw.write("sdfsgsd");
         //    使用缓冲区的刷新方法将数据刷新到目的地。
         bufw.flush();
 
+        //缓冲区读取数据
+        FileReader fr = new FileReader(PATH+"buf.txt");
+        BufferedReader bufr = new BufferedReader(fr);
+        String line = null;
+        while ((line=bufr.readLine())!=null)
+            System.out.println(line);
         //关闭缓冲区，相当于关闭了流对象
         bufw.close();
     }
