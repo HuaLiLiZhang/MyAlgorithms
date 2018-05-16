@@ -36,6 +36,7 @@ public class compareWeight {
     }
     public static int cmp(int g1, int g2, int[][] records, int n) {
         //code
+        //厉害的算法，弗洛伊德最短路径问题。
         int max = records[0][0];
         for(int i=0;i<n;i++)
         {

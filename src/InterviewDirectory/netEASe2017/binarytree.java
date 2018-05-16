@@ -1,5 +1,6 @@
 package InterviewDirectory.netEASe2017;
 
+import java.util.*;
 /**
  * Created by huali on 2018/5/15.
  */
@@ -13,12 +14,17 @@ public class binarytree {
 
     private static TreeNode minNode = new TreeNode(Integer.MAX_VALUE);
 
+    private  int  max = 0;
+    private  int min = 99999;
+    private  StringBuilder maxcodec;
+    private  StringBuilder mincodec;
+
     public static void main(String []args)
     {
         TreeNode root = new TreeNode(2);
         TreeNode r1 = new TreeNode(4);
         TreeNode r2 = new TreeNode(7);
-        TreeNode r3 = new TreeNode(9);
+        TreeNode r3 = new TreeNode(5);
         TreeNode r4 = new TreeNode(6);
         TreeNode r5 = new TreeNode(1);
         TreeNode r6 = new TreeNode(3);
@@ -26,8 +32,8 @@ public class binarytree {
         root.right = r2;
         r1.left = r3;
         r1.right = r4;
-        r2.left = r5;
-        r2.right = r6;
+        r2.left = null;
+        r2.right = null;
         r3.left = null;
         r3.right = null;
         r4.left = null;
@@ -36,9 +42,51 @@ public class binarytree {
         r5.right = null;
         r6.left = null;
         r6.right = null;
-        System.out.println(getDis(root));
+        System.out.println(new binarytree().getDis(root));
     }
-    public static int getDis(TreeNode root) {
+    //典型的二进制编码题，算出叶子节点二进制编码，再比编码，计算后缀长度和
+    public  int getDis(TreeNode root) {
+        preorder(root, '0', new StringBuilder());
+        int index = 0;
+        for(index =0;index<(maxcodec.length()>mincodec.length()?maxcodec.length():mincodec.length());index++)
+        {
+            if(maxcodec.charAt(index)!=mincodec.charAt(index))
+                break;
+
+        }
+       return (maxcodec.substring(index).length()+mincodec.substring(index).length()) ;
+    }
+
+    private  void preorder(TreeNode root, char code, StringBuilder codec) {
+        if(root!=null)
+        {
+            codec.append(code);
+            if(root.left==null&&root.right==null)  //因为计算的是叶子结点的最大值和最小值之间的距离。
+            //    所以要使得结点的左右结点都为空时，才是叶子结点。然后计算最大值并记载。
+            {
+                if(max<root.val)
+                {
+                    max = root.val;
+                    maxcodec = codec;
+                }
+                if(min>root.val)
+                {
+                    min = root.val;
+                    mincodec = codec;
+                }
+
+            }
+            preorder(root.left,'0',new StringBuilder(codec));
+            preorder(root.right, '1', new StringBuilder(codec));
+
+
+        }
+
+
+    }
+
+
+    public static int getDis1(TreeNode root) {
         // write code here
         getMaxMIn(root);  //找到最大最小叶子节点
         TreeNode lcanode = getLCA(root);    //找LCA
