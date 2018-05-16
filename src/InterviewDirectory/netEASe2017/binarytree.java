@@ -32,8 +32,10 @@ public class binarytree {
         root.right = r2;
         r1.left = r3;
         r1.right = r4;
-        r2.left = null;
-        r2.right = null;
+        r2.left = r5;
+        r2.right = r6;
+        //r2.left = null;
+        //r2.right = null;
         r3.left = null;
         r3.right = null;
         r4.left = null;
