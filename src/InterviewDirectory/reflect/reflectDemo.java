@@ -2,6 +2,7 @@ package InterviewDirectory.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * Created by huali on 2018/5/19.
@@ -9,7 +10,20 @@ import java.lang.reflect.Field;
 public class reflectDemo {
     public static void main(String[]args)  throws  Exception
     {
-        getFieldDemo();
+        //getFieldDemo();
+
+        getMethoddemo2();
+    }
+
+    private static void getMethoddemo2() throws Exception {
+        Class clazz = Class.forName("InterviewDirectory.reflect.person");
+        Method method = clazz.getMethod("getAge",null);   //获取空参数的一般方法
+        Object obj = clazz.newInstance();
+        method.invoke(obj,null);
+
+        Method method1 = clazz.getMethod("setAge", int.class);
+        Object object = clazz.newInstance();
+        method1.invoke(object, 4576);
 
     }
 
@@ -48,5 +62,11 @@ public class reflectDemo {
         System.out.println(o2);
 
 
+        Method[] methods = class1.getMethods();//获取公有的方法
+        methods = class1.getDeclaredMethods();    //只获取本类的方法，包含私有
+        for(Method me : methods)
+        {
+            System.out.println(me);
+        }
     }
 }
