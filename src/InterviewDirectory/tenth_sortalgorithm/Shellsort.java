@@ -13,7 +13,12 @@ public class Shellsort {
     // 希尔排序就利用了这个特点。
     // 基本思想是：先将整个待排记录序列分割成为若干子序列分别进行直接插入排序，
     // 待整个序列中的记录基本有序时再对全体记录进行一次直接插入排序
-    public void shellsort(int []arr)
+    public static void main(String []args)
+    {
+        int []arr = {9,1,5,8,3,7,4,6,2};
+        shellsort(arr);
+    }
+    public static void shellsort(int []arr)
     {
         if(arr == null || arr.length == 0)
             return ;
@@ -27,7 +32,7 @@ public class Shellsort {
 
 
 
-    public void shellsort1(int []arr, int d)
+    public static void shellsort1(int []arr, int d)
     {
         /**
          * 希尔排序的一趟插入
