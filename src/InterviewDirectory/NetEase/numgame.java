@@ -1,6 +1,5 @@
 package InterviewDirectory.NetEase;
 
-import InterviewDirectory.NetEase2017Spring.set;
 
 import java.util.*;
 
@@ -28,5 +27,39 @@ public class numgame {
 //
 //输出例子1:
 //4
+
+
+    public static void main(String []args)
+    {
+        Scanner sr = new Scanner(System.in);
+        //Set<Integer> set = new TreeSet<>();
+        while (sr.hasNext())
+        {
+            int n = sr.nextInt();
+            int []arr = new int[Integer.MAX_VALUE];
+            int sum = 0;
+            for(int i=0;i<n;i++)
+            {
+                arr[i] = sr.nextInt();
+                sum +=arr[i];
+                arr[sum]  =1;
+                //set.add(arr[i]);
+                //set.add(sum);
+            }
+
+            for(int j=0;j<n;j++)
+            {
+                int temp = sum -arr[j];
+
+            }
+
+        }
+        sr.close();
+
+    }
+
+
+
+
 
 }
