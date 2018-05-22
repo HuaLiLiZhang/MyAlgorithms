@@ -32,33 +32,30 @@ public class numgame {
     public static void main(String []args)
     {
         Scanner sr = new Scanner(System.in);
-        //Set<Integer> set = new TreeSet<>();
         while (sr.hasNext())
         {
             int n = sr.nextInt();
-            int []arr = new int[Integer.MAX_VALUE];
-            int sum = 0;
+            int []arr = new int[n];
             for(int i=0;i<n;i++)
             {
                 arr[i] = sr.nextInt();
-                sum +=arr[i];
-                arr[sum]  =1;
-                //set.add(arr[i]);
-                //set.add(sum);
             }
-
-            for(int j=0;j<n;j++)
+            Arrays.sort(arr);
+            System.out.println(Arrays.toString(arr));
+            int miss =0;
+            for(int i=0;i<n;i++)
             {
-                int temp = sum -arr[j];
-
+                if(arr[i]>miss+1)
+                    break;
+                miss+=arr[i];
             }
+
+            System.out.println(miss+1);
 
         }
         sr.close();
 
     }
-
-
 
 
 
