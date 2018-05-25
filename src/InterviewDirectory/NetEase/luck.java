@@ -53,7 +53,7 @@ public class luck {
         sr.close();
 
     }
-
+    // 思路：DFS生成全组合，同时注意剪枝、避免重复组合
     private static void dfs( int index) {
         for(int i=index ;i<n;i++)
         {
@@ -71,12 +71,12 @@ public class luck {
                 dfs(i+1);
             }
             else {
-                sum -=arr[i];
-                multi/=arr[i];   //不满足的话，就不满足和大于积。所以跳出。
+                //不满足的话，就不满足和大于积。所以跳出。
                 break;
             }
             sum-=arr[i];
             multi/=arr[i];
+            // 跳过相等的元素，避免重复组合
             for (; i < n - 1 && arr[i] == arr[i + 1]; i++);
         }
     }
