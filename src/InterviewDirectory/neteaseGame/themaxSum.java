@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by huali on 2018/5/25.
  */
 public class themaxSum {
+//    连续相加最大值问题。
 //    在一个N*N的数组中寻找所有横，竖，左上到右下，右上到左下，
 // 四种方向的直线连续D个数字的和里面最大的值
 //输入描述:
