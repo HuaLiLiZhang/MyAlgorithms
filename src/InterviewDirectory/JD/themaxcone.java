@@ -48,4 +48,30 @@ public class themaxcone {
             return 0;
         return Math.min(thefirstone(v,i+1, end), thefirstone(v,i,end-1));
     }
+
+
+//动态规划版本
+//动态规划 , 生成两个NXN的矩阵 f 和 s ,时间复杂度是：O(N2) ， 空间复杂度是：O(N2)
+        public int themax(int[]arr)
+        {
+            if(arr ==null ||arr.length==0)
+                return 0;
+            int [][] f = new int [arr.length][arr.length];
+            int [][] s = new int [arr.length][arr.length];
+            for(int j =0;j<arr.length;++j)
+            {
+                f[j][j]= arr[j];
+                for(int i = j-1;i>=0;)
+                {
+                    f[i][j] = Math.max(arr[i]+s[i+1][j], arr[j]+s[i][j-1]);
+                    s[i][j] = Math.min(f[i+1][j], f[i][j-1]);
+                    i--;
+                }
+            }
+            return Math.max(f[0][arr.length-1], s[0][arr.length-1]);
 }
+
+
+
+}
+
