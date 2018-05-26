@@ -1,5 +1,10 @@
 package InterviewDirectory.neteaseGame;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Scanner;
+
 /**
  * Created by huali on 2018/5/25.
  */
@@ -49,6 +54,109 @@ public class putbox {
     //开个四维数组visit，前面两维记录人的X、Y，另外两维记录箱子的X、Y。
     //
     //显而易见，这就是一个BFS，何为BFS？请见下方图解：
+
+
+    private static class State{
+        int px ,py, bx, by;
+        State pre;
+
+        public State(int px, int py, int bx, int by, State pre) {
+            this.px = px;
+            this.py = py;
+            this.bx = bx;
+            this.by = by;
+            this.pre = pre;
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sr = new Scanner(System.in);
+        while (sr.hasNext())
+        {
+            String s = sr.nextLine();
+            int n = Integer.parseInt(s.split(" ")[0]);
+            int px = -1,py=-1,bx=-1,by=-1;
+            char [][] maze = new char[n][n];
+            for(int i=0;i<n;i++)
+            {
+                maze[i] = sr.nextLine().toCharArray();
+                for(int j=0;j<maze[i].length;j++)
+                {
+                    if(maze[i][j]=='X')
+                    {
+                        px = i;
+                        py = j;
+                    }else if(maze[i][j]=='*')
+                    {
+                        bx = i;
+                        by = j;
+                    }
+                }
+            }
+
+
+            State start = new State(px,py,bx,by,null);
+            List<State> list = bfs(maze, start);
+            System.out.println(list.size()-1);
+        }
+        sr.close();
+    }
+
+    private static List<State> bfs(char[][] maze, State start) {
+        int n = maze.length;
+        int m = maze[0].length;
+
+        boolean [][][][] added = new boolean[n][m][n][m];
+        //前面两维，代表人的位置，后面两维代表箱子的位置
+        Queue<State> queue = new LinkedList<>();
+        LinkedList<State> list = new LinkedList<>();
+        queue.add(start);//根节点，即人和箱子最开始的位置
+        added[start.px][start.py][start.bx][start.by] = true;  //人的初始位置和箱子的初始位置
+        int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        State end = null;
+        while (!queue.isEmpty()) {
+            State cur = queue.poll();//当前节点
+
+            //判断是否到达终点
+            if (maze[cur.bx][cur.by] == '@') {
+                end = cur;
+                break;
+            }
+            for (int[] a : move) {
+                //先将人移动到箱子的位置。
+                State next = new State(cur.px + a[0], cur.py + a[1], cur.bx, cur.by, cur);
+                //如果人移动到与箱子的位置相同，则箱子和人一起移动。
+                if (next.px == next.bx && next.py == next.by)
+                {
+                    next.bx += a[0];
+                    next.by += a[1];
+                    //如果箱子移动到边界或者遇到障碍物，则重新继续向其他方向移动
+                    if (next.bx < 0 || next.bx >= n || next.by < 0 || next.by >= m || maze[next.bx][next.by] == '#')
+                        continue;
+                }
+                ////如果人移动到边界或者遇到障碍物，则重新继续向其他方向移动
+                else if (next.px < 0 || next.px >= n || next.py < 0 || next.py >= m || maze[next.px][next.py] == '#') {
+                    continue;
+                }
+                //如果人和物体都没有到达之前的位置。，则往队列中添加这个位置，并将此位置设为true
+                //若该节点在前面没被continue，那么，就将这些未曾去过的节点加入到队列中
+                if (!added[next.px][next.py][next.bx][next.by]) {
+                    queue.add(next);
+                    added[next.px][next.py][next.bx][next.by] = true;
+                }
+            }
+        }
+
+
+        if (end != null) {
+            while (end != null) {
+                list.addFirst(end);  //当end一直有前驱的话，就把它加入到list中，说明走过这些节点才能到达目的地
+                end = end.pre;
+            }
+        }
+        return list;
+    }
 
 
 }
