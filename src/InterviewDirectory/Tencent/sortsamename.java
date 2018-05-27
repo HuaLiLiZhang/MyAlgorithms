@@ -91,9 +91,10 @@ public class sortsamename {
 
         indegree = new int[n];
         for (int i = 0; i < n; i++) {
-            indegree[i] = 0;
+
             for (int j = 0; j < n; j++) {
-                map[i][j] = 0;
+                if(map[j][i]==1)
+                    indegree[i]++;
             }
         }
 
