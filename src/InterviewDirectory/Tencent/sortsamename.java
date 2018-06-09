@@ -45,7 +45,9 @@ public class sortsamename {
 
     public static void main(String []args)
     {
-
+        List<String>allMembers=new ArrayList<>();  //初始化。
+        List<Request> requests=new ArrayList<>();
+        List<String> l0 = new sortsamename().getValidOrder(allMembers,requests);
     }
 
     List<String> getValidOrder(List<String>allMembers, List<Request> requests)

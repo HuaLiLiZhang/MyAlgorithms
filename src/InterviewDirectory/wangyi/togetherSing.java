@@ -1,5 +1,7 @@
 package InterviewDirectory.wangyi;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -47,9 +49,6 @@ public class togetherSing {
                     dp[i][i-1] = acc[i-1];
                     for(int j=0;j<i-1;j++)
                     {
-                        //链接：https://www.nowcoder.com/questionTerminal/fddf64d5757e41ec93f3ef0c0a10b891
-                        //来源：牛客网
-                        //
                         //a:当 j=i-1 时 例如: dp[4][3]（3=4-1）
                         // 则若小Q当前弹的是第4个音调，牛博士此前刚弹完的是第3个音调，
                         // 那么小Q之前弹的音调的可能情况有：2、 1、 0  （或者一个也没弹）四种可能，
@@ -74,5 +73,25 @@ public class togetherSing {
         }
         sr.close();
 
+        //ThreadLocal t1 = new ThreadLocal();
+    //    泛型
+    //    List<String> list = new LinkedList<>();
+    //    List<Object> list1 = new LinkedList<>();
+        //list1 = list;//编译错误，不能，因为两边都有泛型且指定的类型不相同
+    //    解决办法：
+        //
+        //方法一:从 LinkedList<string>逐个取值,添加到LinkedList<Object> 里.
+        //
+        //方法二:去掉其中任意1个List的泛型
+        //方法三:把LinkedList<Object>修改成LinkedList<? extends Object>
+        //
+        //方法四: 创建LinedList<Object>时,把 LinkedList<string>list1作为参数传进去
+
+        //Object o = list;  //可以赋值给一个object的变量。
+
+
     }
+
+
+
 }
