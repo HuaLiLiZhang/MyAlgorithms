@@ -75,4 +75,15 @@ public class MergeSort {
             arr[left+p] = temp[p];
         }
     }
+
+    public static void main(String[]args)
+    {
+        int[]arr ={5,3,4,7,8,1,9,0,2};
+        new MergeSort().mergesort(arr);
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
 }

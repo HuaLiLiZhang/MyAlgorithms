@@ -1,6 +1,8 @@
 package InterviewDirectory.tenth_sortalgorithm;
 
 
+import offer.aMoreThanHalfNum_Solution;
+
 /**
  * Created by huali on 2018/4/5.
  */
@@ -43,6 +45,13 @@ public class quicksort {
         quicksort(arr, left+1, r);
     }
 
+    public static void main(String []args)
+    {
+        int[] data5 = new int[] { 5, 3, 6, 0, 2, 1, 9, 4, 8, 7 };
+        new quicksort().quicksort2(data5, 0, data5.length-1);
+        System.out.println("排序后的数组：");
+
+    }
 
     public void quicksort2(int []arr, int left, int right)
     {

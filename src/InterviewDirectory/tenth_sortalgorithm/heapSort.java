@@ -80,5 +80,19 @@ public class heapSort {
         arr[b] = temp;
     }
 
+    public static void main(String []args)
+    {
+        int[] data5 = new int[] { 5, 3, 6, 0, 2, 1, 9, 4, 8, 7 };
+        print(data5);
+        new heapSort().heapsort(data5);
+        System.out.println("排序后的数组：");
+        print(data5);
+    }
+    public    static void print(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + "\t");
+        }
+        System.out.println();
+    }
 
 }
