@@ -1,8 +1,7 @@
 package offer;
 
 
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by huali on 2018/6/29.
@@ -18,6 +17,22 @@ public class myComparable {
             arr.add(new Mycomparator(i+"arr",String.valueOf(numbers[i])));
         }
 
+        //System.out.println(arr);
+
+        //List<worker> arr = new ArrayList<>();
+        //for(int i=0;i<numbers.length;i++)
+        //{
+        //    arr.add(new worker(i+"arr",String.valueOf(numbers[i])));
+        //}
+        //
+        //System.out.println(arr);
+
+        //Iterator<worker> iterator = arr.iterator();
+        //while (iterator.hasNext()) {
+        //    worker worker = iterator.next();
+        //    //System.out.println(worker);
+        //    s += worker.a;
+        //}
 
         Iterator<Mycomparator> iterator = arr.iterator();
         while (iterator.hasNext()) {
@@ -36,6 +51,22 @@ public class myComparable {
         System.out.println(new myComparable().PrintMinNumber(arr));
     }
 }
+
+class worker {
+    public String a;
+    String i;
+    worker(String i,String a) {
+        this.i = i;
+        this.a = a;
+    }
+
+    @Override
+    public String toString() {
+        return "Mycomparator [i=" + i + ", a=" + a + "]";
+    }
+
+}
+
 class Mycomparator implements Comparable<Mycomparator> {
     public String a;
     String i;
