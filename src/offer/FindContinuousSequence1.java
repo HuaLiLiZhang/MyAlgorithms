@@ -42,5 +42,7 @@ public class FindContinuousSequence1 {
             arr.add(i);
         }
         array.add(arr);
+
+        char[] ch = {'1','2'};
     }
 }
