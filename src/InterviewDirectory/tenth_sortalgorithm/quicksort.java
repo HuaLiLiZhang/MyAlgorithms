@@ -1,7 +1,6 @@
 package InterviewDirectory.tenth_sortalgorithm;
 
 
-import offer.aMoreThanHalfNum_Solution;
 
 /**
  * Created by huali on 2018/4/5.
@@ -14,7 +13,7 @@ public class quicksort {
     //先从数列中取出一个数作为key值；
     //将比这个数小的数全部放在它的左边，大于或等于它的数全部放在它的右边；
     //对左右两个小数列重复第二步，直至各区间只有1个数。
-    public void quicksort(int[]arr, int l, int r)
+    public void quicksort0(int[]arr, int l, int r)
     {
         if(arr==null||arr.length==0||l>=r)
             return ;
@@ -41,15 +40,21 @@ public class quicksort {
             }
         }
         arr[left] = pivot;
-        quicksort(arr, l, left-1);
-        quicksort(arr, left+1, r);
+        quicksort0(arr, l, left-1);
+        quicksort0(arr, left+1, r);
     }
 
     public static void main(String []args)
     {
         int[] data5 = new int[] { 5, 3, 6, 0, 2, 1, 9, 4, 8, 7 };
-        new quicksort().quicksort2(data5, 0, data5.length-1);
+        //new quicksort().quicksort2(data5, 0, data5.length-1);
+        new quicksort().quicksort3(data5, 0, data5.length-1);
         System.out.println("排序后的数组：");
+        for( int a : data5)
+        {
+            System.out.print(a+" ");
+        }
+
 
     }
 
@@ -58,8 +63,8 @@ public class quicksort {
         if(arr==null||arr.length==0||left>=right)
             return ;
         int pivot = partition(arr, left, right);
-        quicksort(arr, left, pivot-1);
-        quicksort(arr, pivot+1, right);
+        quicksort0(arr, left, pivot-1);
+        quicksort0(arr, pivot+1, right);
     }
     public int partition(int []arr, int left, int right)
     {
@@ -96,33 +101,33 @@ public class quicksort {
     // 然后交换这两个元素，重复操作直到两指针相遇，
     // 然后将基准元素arr[left]与左子序列最后的元素arr[j]进行交换即可，用代码描述为：
 
-    public int partition1(int arr[] ,int left ,int right)
-    {
-        int i = left+1, j = right;
-        int temp = arr[left];
-        while (i<j) {
-            while (arr[i] < temp && i < right) {
-                i++;
-            }
-            while (arr[j] > temp && j >left) {
-                j--;
-            }
-            if (i >= j)
-                break;
-            swap(arr, i, j);
-        }
-        swap(arr,left, j);
-        return j;
-    }
+    //public int partition1(int arr[] ,int left ,int right)
+    //{
+    //    int i = left+1, j = right;
+    //    int temp = arr[left];
+    //    while (i<j) {
+    //        while (arr[i] < temp && i < right) {
+    //            i++;
+    //        }
+    //        while (arr[j] > temp && j >left) {
+    //            j--;
+    //        }
+    //        if (i >= j)
+    //            break;
+    //        swap(arr, i, j);
+    //    }
+    //    swap(arr,left, j);
+    //    return j;
+    //}
 
 
     public void quicksort3(int []arr, int left, int right)
     {
         if(arr==null||arr.length==0||left>=right)
             return ;
-        int pivot = partition1(arr, left, right);
-        quicksort(arr, left, pivot-1);
-        quicksort(arr, pivot+1, right);
+        int pivot = partition(arr, left, right);
+        quicksort3(arr, left, pivot-1);
+        quicksort3(arr, pivot+1, right);
     }
 
     public void swap(int[]arr, int a,int b)
