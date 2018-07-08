@@ -48,6 +48,12 @@ public class quicksort {
     {
         int[] data5 = new int[] { 5, 3, 6, 0, 2, 1, 9, 4, 8, 7 };
         //new quicksort().quicksort2(data5, 0, data5.length-1);
+        System.out.println("排序前的数组：");
+        for( int a : data5)
+        {
+            System.out.print(a+" ");
+        }
+        System.out.println();
         new quicksort().quicksort3(data5, 0, data5.length-1);
         System.out.println("排序后的数组：");
         for( int a : data5)
