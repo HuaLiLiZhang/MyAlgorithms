@@ -19,6 +19,7 @@ public class reflectDemo {
         Class clazz = Class.forName("InterviewDirectory.reflect.person");
         Method method = clazz.getMethod("getAge",null);   //获取空参数的一般方法
         Object obj = clazz.newInstance();
+        //person p1 = (person)clazz.newInstance();
         method.invoke(obj,null);
 
         Method method1 = clazz.getMethod("setAge", int.class);
