@@ -1,6 +1,8 @@
 package InterviewDirectory.Tencent2018;
 
 import java.util.*;
+import java.util.Map.Entry;
+import java.util.concurrent.*;
 
 /**
  * Created by huali on 2018/7/16.
@@ -40,18 +42,49 @@ public class test {
                 stream().filter(x->!x.equals("a")).forEach(System.out::println);
 
 */
-        testAllocation();
+        //testAllocation();
+
+
+        TreeSet tree = new TreeSet<>();
+        HashMap<String,Integer> map = new HashMap<>();
+        for(Entry<String,Integer> en : map.entrySet())
+        {
+            String key = en.getKey();
+            Integer va = en.getValue();
+        }
+        ArrayList<String> arr = new ArrayList<>();
+        LinkedList<String> linked = new LinkedList<>();
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("lalala");
+            }
+        });
+        Future f = executorService.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                return 20;
+            }
+        });
+        executorService.shutdown();
+        try {
+            System.out.println(f.get());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private static final int _1MB = 1024*1024;
     /**
      * VM ARGS: -verbose:gc - Xms20m -Xmx20m -Xmn10m - XX:SurvivorRatio=8 -XX:+PrintGCDetails
      */
-    public static void testAllocation(){
-        byte[] allocation1, allocation2,allocation3 ,allocation4;
-        allocation1 = new byte [2 * _1MB];
-        allocation2 = new byte [2 * _1MB];
-        allocation3 = new byte [2 * _1MB];
-        allocation4 = new byte [4 * _1MB];
-    }
+    //public static void testAllocation(){
+    //    byte[] allocation1, allocation2,allocation3 ,allocation4;
+    //    allocation1 = new byte [2 * _1MB];
+    //    allocation2 = new byte [2 * _1MB];
+    //    allocation3 = new byte [2 * _1MB];
+    //    allocation4 = new byte [4 * _1MB];
+    //}
 }
