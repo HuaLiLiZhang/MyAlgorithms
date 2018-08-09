@@ -44,4 +44,7 @@ public class pingduoduopiaoxuan {
         System.out.println(max);
         sc.close();
     }
+
+
+
 }
