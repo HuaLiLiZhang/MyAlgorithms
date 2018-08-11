@@ -1,4 +1,4 @@
-package MultiThread.ThreadProgramming;
+package InterviewDirectory.pingduoduo2019;
 
 import java.util.*;
 

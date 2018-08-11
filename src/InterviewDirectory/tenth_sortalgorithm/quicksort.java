@@ -46,7 +46,7 @@ public class quicksort {
 
     public static void main(String []args)
     {
-        int[] data5 = new int[] { 5, 3, 6, 0, 2, 1, 9, 4, 8, 7 };
+        int[] data5 = new int[] { 25,84,21,47,15,27,68,35,20 };
         //new quicksort().quicksort2(data5, 0, data5.length-1);
         System.out.println("排序前的数组：");
         for( int a : data5)

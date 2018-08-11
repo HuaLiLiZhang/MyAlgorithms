@@ -1,4 +1,4 @@
-package MultiThread.ThreadProgramming;
+package InterviewDirectory.pingduoduo2019;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -43,7 +43,11 @@ public class pingduoduopiaoxuan {
 
         System.out.println(max);
         sc.close();
+
+
     }
+
+
 
 
 
