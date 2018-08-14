@@ -20,6 +20,7 @@ public class Mainwangyi {
         for(int i = 0;i<n ;i++){
             sleep[i] = in.nextInt();
 
+            //记录不睡觉时，能得到的 兴趣评分。
             if(sleep[i]==1){
                 result+=minScore[i];
             }
@@ -30,6 +31,7 @@ public class Mainwangyi {
         for(;s<n-k+1;s++)
         {
             int tempmax = 0;
+            //唤醒小易一次，持续清醒的时间K，能获得的最大兴趣评分。
             for(int i = 0;i<k;i++)
             {
                 if(sleep[s+i]!=1)
@@ -37,6 +39,7 @@ public class Mainwangyi {
                     tempmax +=minScore[s+i];
                 }
             }
+            //求唤醒一个窗口内兴趣值最大的评分。
             if(addmaxNum<tempmax)
                 addmaxNum = tempmax;
         }
