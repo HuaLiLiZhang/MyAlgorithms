@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class aaazzzDictionary {
     public static void main(String[] args)
     {
+    //    时间复杂度太高，只通过了20%
     //    Scanner sc = new Scanner(System.in);
     //    int n = sc.nextInt();
     //    int m = sc.nextInt();
@@ -64,6 +65,8 @@ public class aaazzzDictionary {
         //
         //System.out.println(str);
 
+
+            //改进的方法：
             Scanner sc = new Scanner(System.in);
             int n = sc.nextInt();
             int m = sc.nextInt();
