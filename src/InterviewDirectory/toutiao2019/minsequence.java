@@ -48,99 +48,120 @@ import java.util.*;
 //    结果
 //9
 public class minsequence {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int [] a = new int[n];
-        int [] b = new int[n];
-        for(int i=0;i<n;i++)
-        {
-            a[i] = sc.nextInt();
-        }
-        sc.nextLine();
-        int [] res = new int[n];
-        for(int i=0;i<n;i++)
-        {
-            b[i] = sc.nextInt();
-            res[i] = b[i]-a[i];
-        }
-        List<Integer> list = new ArrayList<>();
-        int start = 0;
-        int i=0;
-        while (i<n)
-        {
-            start = i;
-            while (i<n&&res[i]>0)
-            {
-                i++;
-            }
-            if(i>0&&a[i-1]<b[i-1]&&start<=i)
-            {
-                list.add(start);
-                list.add(i-1);
-            }
-            i++;
-        }
+    public static void main(String[] args)
+    {
+        int [] a = {8, 10, 2, 5, 7};
+        int [] b = {3, 11, 7, 6, 9};
 
-        int count = 0;
-        for(int j=0;j<list.size();j+=2)
-        {
-            if(j+1<list.size()&&list.get(j+1)-list.get(j)==0)
-                count +=1;
-            else if(j+1<list.size())
-                count +=numsubsequence(list.get(j),a, b, list.get(j+1));
-
-        }
-        System.out.println(count);
 
     }
 
-    private static int numsubsequence(int start, int[] a, int[] b, int end ) {
-        int maxaindex = 0;
-        int maxa = 0;
-        int minb = Integer.MAX_VALUE;
 
-        if(start==end)
-            return 1;
-        if(start>end)
-            return 0;
-        for(int i =start;i<=end;i++)
-        {
-            if(a[i]>maxa)
-            {
-                maxa = a[i];
-                maxaindex = i;
-            }
-            if(b[i]<minb)
-            {
-                minb = b[i];
-            }
-        }
-        if(maxa<minb)
-        {
-            return countlistall(end-start+1);
-        }
-        int left = maxaindex -1 ;
-        int right = maxaindex +1;
-        int tempbmin = b[maxaindex];
-        while (right<=end&&maxa< Math.min(tempbmin, b[right]))
-        {
-            tempbmin = Math.min(tempbmin, b[right]);
-            right++;
-        }
-        while (left>=start&&maxa< Math.min(tempbmin, b[left]))
-        {
-            tempbmin = Math.min(tempbmin, b[left]);
-            left--;
-        }
 
-        int counttemp = countlistall(right-left-1)-countlistall(right-maxaindex-1)-countlistall(maxaindex - left-1);
 
-        return counttemp + numsubsequence(start, a, b, maxaindex-1) + numsubsequence(maxaindex+1, a, b, end);
 
-    }
 
-    private static int countlistall(int n) {
-        return n*(n+1)/2;
-    }
+
+
+
+
+
+
+
+
+    //public static void main(String[] args) {
+    //    Scanner sc = new Scanner(System.in);
+    //    int n = sc.nextInt();
+    //    int [] a = new int[n];
+    //    int [] b = new int[n];
+    //    for(int i=0;i<n;i++)
+    //    {
+    //        a[i] = sc.nextInt();
+    //    }
+    //    sc.nextLine();
+    //    int [] res = new int[n];
+    //    for(int i=0;i<n;i++)
+    //    {
+    //        b[i] = sc.nextInt();
+    //        res[i] = b[i]-a[i];
+    //    }
+    //    List<Integer> list = new ArrayList<>();
+    //    int start = 0;
+    //    int i=0;
+    //    while (i<n)
+    //    {
+    //        start = i;
+    //        while (i<n&&res[i]>0)
+    //        {
+    //            i++;
+    //        }
+    //        if(i>0&&a[i-1]<b[i-1]&&start<=i)
+    //        {
+    //            list.add(start);
+    //            list.add(i-1);
+    //        }
+    //        i++;
+    //    }
+    //
+    //    int count = 0;
+    //    for(int j=0;j<list.size();j+=2)
+    //    {
+    //        if(j+1<list.size()&&list.get(j+1)-list.get(j)==0)
+    //            count +=1;
+    //        else if(j+1<list.size())
+    //            count +=numsubsequence(list.get(j),a, b, list.get(j+1));
+    //
+    //    }
+    //    System.out.println(count);
+    //
+    //}
+    //
+    //private static int numsubsequence(int start, int[] a, int[] b, int end ) {
+    //    int maxaindex = 0;
+    //    int maxa = 0;
+    //    int minb = Integer.MAX_VALUE;
+    //
+    //    if(start==end)
+    //        return 1;
+    //    if(start>end)
+    //        return 0;
+    //    for(int i =start;i<=end;i++)
+    //    {
+    //        if(a[i]>maxa)
+    //        {
+    //            maxa = a[i];
+    //            maxaindex = i;
+    //        }
+    //        if(b[i]<minb)
+    //        {
+    //            minb = b[i];
+    //        }
+    //    }
+    //    if(maxa<minb)
+    //    {
+    //        return countlistall(end-start+1);
+    //    }
+    //    int left = maxaindex -1 ;
+    //    int right = maxaindex +1;
+    //    int tempbmin = b[maxaindex];
+    //    while (right<=end&&maxa< Math.min(tempbmin, b[right]))
+    //    {
+    //        tempbmin = Math.min(tempbmin, b[right]);
+    //        right++;
+    //    }
+    //    while (left>=start&&maxa< Math.min(tempbmin, b[left]))
+    //    {
+    //        tempbmin = Math.min(tempbmin, b[left]);
+    //        left--;
+    //    }
+    //
+    //    int counttemp = countlistall(right-left-1)-countlistall(right-maxaindex-1)-countlistall(maxaindex - left-1);
+    //
+    //    return counttemp + numsubsequence(start, a, b, maxaindex-1) + numsubsequence(maxaindex+1, a, b, end);
+    //
+    //}
+    //
+    //private static int countlistall(int n) {
+    //    return n*(n+1)/2;
+    //}
 }

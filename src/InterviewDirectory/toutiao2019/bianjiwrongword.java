@@ -24,7 +24,54 @@ B:[5, 16], [78, 94]
 """
 * */
 public class bianjiwrongword {
-    public static void main(String[] args) {
+
+    public static void main(String[] args)
+    {
+        int [][] arr = {{1,10},{32,45},{78,94},{5,16}, {80,100},{200,220},{16,32}};
+        Arrays.sort(arr, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0]-o2[0];
+            }
+        });
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0;i<arr.length;i++)
+        {
+            if(list.size()==0)
+            {
+                list.add(arr[i][0]);
+                list.add(arr[i][1]);
+            }
+            else if(list.get(list.size()-1)<arr[i][0])
+            {
+                list.add(arr[i][0]);
+                list.add(arr[i][1]);
+            }else {
+                if(list.get(list.size()-1)<arr[i][1])
+                {
+                    list.remove(list.size()-1);
+                    list.add(arr[i][1]);
+                }
+            }
+        }
+        for(int i = 0;i<list.size();i++)
+        {
+            if(i%2!=0&&i!=list.size()-1)
+            {
+                System.out.print(list.get(i));
+                System.out.print(";");
+            }
+            else if(i%2==0)
+            {
+                System.out.print(list.get(i));
+                System.out.print(",");
+            }else
+            {
+                System.out.print(list.get(i));
+            }
+        }
+    }
+    /*public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt();
         String str = "";
@@ -97,5 +144,5 @@ public class bianjiwrongword {
             }
         }
 
-    }
+    }*/
 }
