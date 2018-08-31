@@ -6,6 +6,8 @@ import java.util.Scanner;
  * Created by huali on 2018/8/28.
  */
 public class replacesubString {
+
+    //替换String s中的子串s1为s2。
     public static void main(String[] args)
     {
 
