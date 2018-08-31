@@ -7,48 +7,14 @@ import java.util.Scanner;
 /**
  * Created by huali on 2018/8/28.
  */
-public class Main5 {
+public class maxAscSum_ofArr {
     //对于正整数数组，求最大元素和，要求元素大小必须是升序。
     //int[] data = {5,1,3,4,9,7,6,8};
     //最大升序序列是：1,3,4,7,8
 
     //5 1 3 4 9 7 6 8
     //23
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            String s = sc.nextLine();
-            String[] temp = s.split(" ");
-            int[] a = new int[temp.length];
-            for (int i = 0; i < temp.length; i++) {
-                a[i] = Integer.parseInt(temp[i]);
-            }
-
-            
-
-            }
-
-
-        }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     /*   public static void main(String[] args) {
+        public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             List<Integer> list = new ArrayList<>();
 
@@ -85,6 +51,5 @@ public class Main5 {
                 }
             }
         }
-*/
 
 }
