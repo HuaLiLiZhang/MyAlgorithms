@@ -93,4 +93,24 @@ public class MaxASCLength_ofArr {
         }
         return res;
     }
+
+
+//    动态规划
+public static int lis(int[] array){
+    int length=array.length;
+    if (length ==0)
+        return 0;
+    int maxCount=0;
+    int[] dp=new int[length];
+    for(int i =0;i<length;i++){
+        dp[i]=1;
+        for(int j =0;j<i;j++){
+            if(array[j]<array[i])
+                dp[i]=dp[i]>dp[j]+1?dp[i]:dp[j]+1;
+            if(maxCount<dp[i])
+                maxCount=dp[i];
+        }
+    }
+    return maxCount;
+}
 }
