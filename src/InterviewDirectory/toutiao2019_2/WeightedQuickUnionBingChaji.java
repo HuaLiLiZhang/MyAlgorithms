@@ -36,6 +36,7 @@ public class WeightedQuickUnionBingChaji {
         //14
         //7
         int [] inputs = {0,1,9,4,9,6,6,7,8,9,10,12,10,11};
+        //int [] inputs = {0,1,9,4,9,6,6,7,8,9};
         for(int i = 0;i<n;i++)
         {
             if(!isSameset(i,inputs[i]))
@@ -48,8 +49,8 @@ public class WeightedQuickUnionBingChaji {
     }
 
     private static void Union(int p, int q) {
-        int pvalue = id[p];
-        int qvalue = id[q];
+        int pvalue = root(p);
+        int qvalue = root(q);
         if(pvalue==qvalue)
             return ;
         if(sz[pvalue]<sz[qvalue])
