@@ -1,11 +1,12 @@
 package InterviewDirectory.toutiao2019_2;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by huali on 2018/8/25.
  */
-public class num1 {
+public class isSameSetUnionSet {
+//    一个团队有10个人，每一行代表这个人认识那个人，如果相互认识，或者a->c，c->b，那么a->b，
 //10
 //0
 //5 3 0
@@ -17,24 +18,101 @@ public class num1 {
 //7 9 0
 //0
 //9 7 0
+
+    public static class Node{
+        public Set<Integer> friends = new HashSet<>();
+    }
+
+    public static HashMap<Node,Node> fatherMap;
+    public static HashMap<Node, Integer> sizeMap;
+
     public static void main(String[] args)
     {
+
+    //    并查集
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [][] arr = new int[n][n];
-        sc.nextLine();
-        for(int i = 0;i<n;i++)
+        if(n<=0||n>=10000)
         {
-            String temp = sc.nextLine();
-            String [] a = temp.split(" ");
-            for(int j = 0;j<a.length;j++)
+            System.out.println(0);
+            return;
+        }
+
+        Node[] nodes = new Node[n+1];
+        int tmp;
+        fatherMap = new HashMap<>();
+        sizeMap = new HashMap<>();
+        for(int i = 1;i<=n;i++)
+        {
+            nodes[i] = new Node();
+            fatherMap.put(nodes[i],nodes[i]);
+            sizeMap.put(nodes[i],1);
+            while ((tmp=sc.nextInt())!=0)
             {
-                arr[i][j] = Integer.parseInt(a[j]);
+                nodes[i].friends.add(tmp);
             }
         }
-    //    并查集
+    //    2.遍历每一个节点，根据合并策略进行合并
+        for(int i = 1;i<nodes.length;i++)
+        {
+            if(nodes[i].friends.size()==0)
+                continue;
+            for(Iterator<Integer> iterator = nodes[i].friends.iterator();iterator.hasNext();)
+            {
+                Integer one = iterator.next();
+                if(!IsSameSet(nodes[i], nodes[one]))
+                {
+                    union(nodes[i], nodes[one]);
+                    n--;
+                }
+            }
+        }
+        System.out.println(n);
 
-        System.out.println(arr);
+
+    }
+
+    private static void union(Node a, Node b) {
+        if(a==null||b==null)
+        {
+            return ;
+        }
+        Node ahead = findHead(a);
+        Node bhead = findHead(b);
+        if(ahead!=bhead)
+        {
+            int asetSize = sizeMap.get(ahead);
+            int bsetSize = sizeMap.get(bhead);
+            if(asetSize<=bsetSize)
+            {
+                fatherMap.put(ahead, bhead);
+                sizeMap.put(bhead,asetSize+bsetSize);
+            }else {
+                fatherMap.put(bhead,ahead);
+                sizeMap.put(ahead,asetSize+bsetSize);
+            }
+        }
+
+    }
+
+    private static boolean IsSameSet(Node a, Node b) {
+        return findHead(a) == findHead(b);
+
+    }
+
+    private static Node findHead(Node node) {
+        //Node father = fatherMap.get(node);
+        //if (father!=node)
+        //{
+        //    father = fatherMap.get(father);
+        //}
+        Node father = node;
+        while (father!=fatherMap.get(father))
+        {
+            father = fatherMap.get(father);
+        }
+        fatherMap.put(node, father);
+        return father;
 
     }
 }
