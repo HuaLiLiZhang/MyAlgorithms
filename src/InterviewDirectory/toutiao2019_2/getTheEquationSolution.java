@@ -6,7 +6,8 @@ import java.util.*;
  * Created by huali on 2018/8/25.
  */
 public class getTheEquationSolution {
-
+//形如y = 4 - x 的约束关系，查询形如y-x的值
+//   y = k - x
 
 //输入：
 //3 2
