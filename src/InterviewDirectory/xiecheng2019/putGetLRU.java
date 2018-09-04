@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 /**
  * Created by huali on 2018/9/4.
  */
-public class Main3<K, V> {
+public class putGetLRU<K, V> {
     //题目描述：
     //设计一个数据结构，实现LRU cache的功能，LRU，最近最少使用缓存，支持put和get两种方法：
     //新插入或获取key意味着被使用一次。
