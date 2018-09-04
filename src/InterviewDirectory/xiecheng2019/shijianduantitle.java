@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by huali on 2018/9/4.
  */
-public class Main2 {
+public class shijianduantitle {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
