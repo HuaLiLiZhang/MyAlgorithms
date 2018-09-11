@@ -20,6 +20,78 @@ public class RobotGetricemaxhaochi {
     //1 2 3 -2 3 -10 3
     //输出：12
     //因为 [1 2 3] -2 [3] -10 [3]
+
+    //
+    ///*
+    //1、先把整个数组改成正负交错的数组，去掉首尾的负数(相邻的正数合并成一个正数，负数合并成一个负数)
+    //2、如果正数个数<=M，输出所有的正数之和
+    //3、如果正数个数>M，将数组中[正负正]合并，该负数为数组中负数的最大值并且三者之和>三者最大值
+    //4、直到3不满足或者正数个数<=M,输出最大的M个正数之和
+    //*/
+
+    /*
+N, M = 7, 3
+ns = [1, 2, 3, -2, 3, -10, 3]
+
+new_ns = []
+tmp = ns[0]
+cnt_pos = 0  # 正数块的数量
+for i in ns[1:] + [0]:  # trick
+    if i != 0 and (tmp > 0) == (i > 0):  # 跳过 0
+        tmp += i
+    else:
+        if tmp > 0:
+            cnt_pos += 1
+        new_ns.append(tmp)
+        tmp = i
+
+# new_ns.append(tmp)
+
+print(new_ns)  # [6, -2, 3, -10, 3]
+print(cnt_pos)  # 3
+
+# 去掉首尾的负数块
+if len(new_ns) >= 1 and new_ns[0] < 0:
+    new_ns.pop(0)
+
+if len(new_ns) >= 1 and new_ns[-1] < 0:
+    new_ns.pop(-1)
+
+print(new_ns)  # [6, -2, 3, -10, 3]
+
+# 按奇偶划分奇数和偶数块
+ns_pos = new_ns[0::2]
+ns_neg = new_ns[1::2]
+print(ns_pos)  # [6, 3, 3]
+print(ns_neg)  # [-2, -10]
+
+# 如果 M 的值小于正数块的数量则进行合并
+updated = True
+while updated and M < cnt_pos:
+    """"""
+    updated = False
+
+    mx_i = 0
+    # mx = max(ns_pos[mx_i] + ns_pos[mx_i+1] + ns_neg[mx_i], ns_pos[mx_i], ns_pos[mx_i])
+    mx = float("-inf")
+    for i in range(len(ns_neg)):
+        tmp = ns_pos[i] + ns_pos[i+1] + ns_neg[i]
+        if tmp < max(ns_pos[i], ns_pos[i+1]):
+            continue
+        if tmp > mx:
+            updated = True
+            mx = tmp
+            mx_i = i
+
+    if updated:
+        # 更新合并后的数组
+        ns_neg.pop(mx_i)
+        ns_pos[mx_i] = mx
+        ns_pos.pop(mx_i+1)
+        cnt_pos -= 1
+
+ns_pos.sort(reverse=True)
+print(sum(ns_pos[:M]))*/
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -33,7 +105,7 @@ public class RobotGetricemaxhaochi {
         }
         int [] dp = new int[arr.length];
         dp[0] = arr[0];
-        
+
         System.out.println();
     }
 }
