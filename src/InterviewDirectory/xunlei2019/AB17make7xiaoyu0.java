@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by huali on 2018/9/12.
  */
 public class AB17make7xiaoyu0 {
+    //只有A，B两个数，求由A，B组成的两个数组成的17个数，使得任意相邻7个数字之和都小于0，如何挑选数字，使得这17个数字之和最大。
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
