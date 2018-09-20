@@ -92,13 +92,13 @@ public class thewintwopeopel {
 
         System.out.println(maxscore[1][N]+" "+(sum[N] - maxscore[1][N])+"差值： "+(maxscore[1][N]-(sum[N] - maxscore[1][N])));
 
-        int win = Math.max(f(1,arr.length-1,arr),s(1,arr.length-1,arr));
-        System.out.println(win+" "+(sum[N]-win)+"差值： "+(win-(sum[N]-win)));
+        //int win = Math.max(f(1,arr.length-1,arr),s(1,arr.length-1,arr));
+        //System.out.println(win+" "+(sum[N]-win)+"差值： "+(win-(sum[N]-win)));
     }
 
 
     //
-    private static int f(int start, int end, int[] arr) {  //第一个人第一次取
+    /*private static int f(int start, int end, int[] arr) {  //第一个人第一次取
         if(start==end)
             return arr[start];
         return Math.max(arr[start]+s(start+1,end,arr),arr[end]+s(start,end-1,arr));
@@ -109,7 +109,15 @@ public class thewintwopeopel {
         if(start==end)
             return 0;
         return Math.min(f(start+1,end,arr),f(start,end-1,arr));
-    }
+    }*/
+
+
+
+
+
+
+
+
 
 
 
