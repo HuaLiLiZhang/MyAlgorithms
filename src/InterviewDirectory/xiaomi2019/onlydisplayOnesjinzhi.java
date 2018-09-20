@@ -90,4 +90,47 @@ public class onlydisplayOnesjinzhi {
         if(count==0)
             System.out.println("None");
     }
+
+
+
+    /*public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            List<String> list = new ArrayList<>();
+
+            while(sc.hasNext()){
+                String str = sc.nextLine();
+                if(str.equals("END"))break;
+                list.add(str);
+            }
+
+            int[] shuzhi = new int[list.size()];
+            for(int i = 0;i<shuzhi.length;i++){
+                String[] temp = list.get(i).split("#");
+                shuzhi[i] = Integer.parseInt(temp[1],Integer.parseInt(temp[0]));
+            }
+
+            List<Integer> index = new ArrayList<>();
+            boolean[] yishu = new boolean[list.size()];
+            Arrays.fill(yishu, true);
+
+            for(int i = 0;i<list.size();i++){
+                boolean flag = index.contains(shuzhi[i]);
+                if(flag&&yishu[i]){
+                    for(int j = 0;j<list.size();j++){
+                        if(shuzhi[j]==shuzhi[i]){
+                            yishu[j]=false;
+                        }
+                    }
+                }
+                if(!flag){
+                    index.add(shuzhi[i]);
+                }
+            }
+
+            for(int i = 0;i<list.size();i++){
+                if(yishu[i]){
+                    System.out.println(list.get(i));
+                }
+            }
+        }*/
 }
