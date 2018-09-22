@@ -24,7 +24,7 @@ public class TrainingRainWater {
     //如果arr[i]即当前的高度，left[i] right[i]右边和左边的左高高度。
     //那么left[i],right[i] 的最小值如果大于arr[i]的话，那么此位置就是可以存水的，
     // 存水量就是left[i],right[i] 的最小值 - arr[i]；
-    /*public static void main(String[] args)
+    public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         String sl = sc.nextLine();
@@ -55,11 +55,11 @@ public class TrainingRainWater {
                 sum += (min - arr[i]);
         }
         System.out.println(sum);
-    }*/
+    }
 
 
 //    第二种方法：
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         String sl = sc.nextLine();
@@ -87,5 +87,5 @@ public class TrainingRainWater {
             }
         }
         System.out.println(sumwater);
-    }
+    }*/
 }
