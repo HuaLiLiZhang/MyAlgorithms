@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by huali on 2018/9/15.
  */
-public class Main2 {
+public class foodsort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
