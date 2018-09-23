@@ -6,7 +6,7 @@ package InterviewDirectory.didi2019;
 public class consistOf100 {
 
     //'9', '+', '8', '+', '7', '+', '6', '+', '5', '+', '4', '+', '3', '+',
-    //'2', '+', '1'数的组合等于100，加号可以为加号可以为减号，也可以不加，直接98,987等鞥。
+    //'2', '+', '1'数的组合等于100，加号可以为加号可以为减号，也可以不加，直接98,987等。
     static char operator[] = new char[8];
     static char expre[] = new char[]
             { '9', '+', '8', '+', '7', '+', '6', '+', '5', '+', '4', '+', '3', '+',
@@ -59,6 +59,6 @@ public class consistOf100 {
         }
 
         if (sum == n)
-            System.out.println(expression + "=" + n);
+            System.out.println(expression + " = " + n);
     }
 }
