@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by huali on 2018/9/7.
  */
-public class MInlength {
+public class pointToMutiDuoBianXingLength {
 
     //题目描述：
     //题目描述：
@@ -53,7 +53,7 @@ public class MInlength {
     private double[] coordinates;   //存放坐标点,e.g.[x0,y0,x1,y1,...]
     private List<Integer> ptsIdx = new LinkedList<>();
 
-    public MInlength(double[] coordinates) {
+    public pointToMutiDuoBianXingLength(double[] coordinates) {
         this.coordinates = coordinates;
         if (coordinates.length % 2 != 0)
             throw new IllegalArgumentException("坐标点coordinates长度必须是偶数");
@@ -179,7 +179,7 @@ public class MInlength {
         {
             test[i] = Integer.parseInt(str[i]);
         }
-        MInlength mcp = new MInlength(test);
+        pointToMutiDuoBianXingLength mcp = new pointToMutiDuoBianXingLength(test);
 
         double[] res = mcp.run();
         //System.out.println();

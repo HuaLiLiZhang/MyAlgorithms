@@ -15,7 +15,7 @@ public class multiplyNumofzuixiaogongbeishu {
     //
     //证明：a可以表示成a = kb + r，则r = a mod b
     //假设d是a,b的一个公约数，则有
-    //d|a, d|b，而r = a - kb，因此d|r 
+    //d|a, d|b，而r = a - kb，因此d|r
     //因此d是(b,a mod b)的公约数
     //
     //假设d 是(b,a mod b)的公约数，则

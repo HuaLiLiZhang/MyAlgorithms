@@ -9,6 +9,8 @@ import java.util.Scanner;
  */
 public class numStringcanchuyi3Num {
 
+    //题目：
+
     //一个数字串可以被拆成多个数字串，列如12345拆成12 3 45或者123 45，
     // 给定一个正整数的数字串n,求n拆开后的数能被3整除的最大数量m是多少（0,也算能被3整除）
     //12 3 45 m = 3;

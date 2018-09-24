@@ -1,6 +1,5 @@
 package InterviewDirectory.beike;
 
-import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 /**
  * Created by huali on 2018/8/18.
  */
-public class card20 {
+public class pukepai_20 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);

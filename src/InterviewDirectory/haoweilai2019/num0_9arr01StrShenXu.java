@@ -45,7 +45,7 @@ public class num0_9arr01StrShenXu {
 
     }
 
-    //dfs：一般找出所有的解，
+    //dfs：一般找出所有的解，设置条件找到需要的解。
     private static void dfs(int[] arr, int start, List<String> list, StringBuffer strbu) {
         if(start>=arr.length)
         {

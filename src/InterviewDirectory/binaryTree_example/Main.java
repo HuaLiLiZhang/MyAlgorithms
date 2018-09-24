@@ -44,11 +44,11 @@ public class Main {
 
         //FabioNanum fi = new FabioNanum();
         //int num = fi.f1(8);
-        //int num2 = fi.f2(8);
-        //int num3 = fi.f3(6);
+        //int legalStr_biaoshifu09 = fi.f2(8);
+        //int ShuangShengCiTwoStr_randomCut_reverse = fi.f3(6);
         //System.out.println(num);
-        //System.out.println(num2);
-        //System.out.println(num3);
+        //System.out.println(legalStr_biaoshifu09);
+        //System.out.println(ShuangShengCiTwoStr_randomCut_reverse);
         //
         //int s1 = fi.s1(5);
         //int s2 = fi.s2(5);

@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * Created by huali on 2018/8/15.
  */
-public class hefashuString {
+public class LegalStringCalResult {
         //测试用例：
         //(+ (* 2 3) (^ 4))
         //11

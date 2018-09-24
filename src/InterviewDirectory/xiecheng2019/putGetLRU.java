@@ -15,14 +15,14 @@ public class putGetLRU<K, V> {
     //int initSize;
     //LinkedHashMap<K, V> cache;
     //
-    //public Main3(int size) {
+    //public RobotGetricemaxhaochi(int size) {
     //    this.initSize = size;
     //    this.cache = new LinkedHashMap<K, V>(size, 0.75f, true) {
     //        private static final long serialVersionUID = 1L;
     //
     //        @Override
     //        protected boolean removeEldestEntry(java.util.Map.Entry<K, V> eldest) {
-    //            return size() > Main3.this.initSize;
+    //            return size() > RobotGetricemaxhaochi.this.initSize;
     //        }
     //    };
     //}
@@ -70,7 +70,7 @@ public class putGetLRU<K, V> {
 
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        //Main3<Integer,Integer> main3 = new Main3<>(n);
+        //RobotGetricemaxhaochi<Integer,Integer> main3 = new RobotGetricemaxhaochi<>(n);
         sc.nextLine();
         //while (sc.hasNext())
         //{

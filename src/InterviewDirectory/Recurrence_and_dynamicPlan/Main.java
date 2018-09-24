@@ -21,8 +21,8 @@ public class Main {
         //mincoins1 mincoins1 =  new mincoins1();
         //int num = mincoins1.minCoins1(arr,15);
         //System.out.println(num);
-        //int num2 = mincoins1.minCoins2(arr,15);
-        //System.out.println(num2);
+        //int legalStr_biaoshifu09 = mincoins1.minCoins2(arr,15);
+        //System.out.println(legalStr_biaoshifu09);
         //
         //minCoins3 minCoins3 = new minCoins3();
         //int num01 = minCoins3.minCoins3(arr,31);
@@ -34,8 +34,8 @@ public class Main {
         //CoinsSUmNUm coinnum = new CoinsSUmNUm();
         //int num = coinnum.coins1(arr, 15);
         //System.out.println(num);
-        //int num2 = coinnum.coins2(arr, 15);
-        //System.out.println(num2);
+        //int legalStr_biaoshifu09 = coinnum.coins2(arr, 15);
+        //System.out.println(legalStr_biaoshifu09);
 
         //int []arr1 = {2,1,5,3,6,4,8,9,7};
         //int []list1 = new generateLIS().list1(arr1);
@@ -75,13 +75,13 @@ public class Main {
         //int [][]map = {{-2,-3,3},{-5,-10,1},{0,30,-5}};
         //int num = new MinHp1().minHP1(map);
         //System.out.println(num);
-        //int num2 = new MinHp1().minHp2(map);
-        //System.out.println(num2);
+        //int legalStr_biaoshifu09 = new MinHp1().minHp2(map);
+        //System.out.println(legalStr_biaoshifu09);
 
         //String str = "1111";
         //int num = new str_to_num1A().num1(str);
         //System.out.println(num);
-        //int num1 = new str_to_num1A().num2(str);
+        //int num1 = new str_to_num1A().legalStr_biaoshifu09(str);
         //System.out.println(num1);
 
         //String str="1^0|0|1";
@@ -89,15 +89,15 @@ public class Main {
         //str_01_boolean strn = new str_01_boolean();
         //int num0 = strn.str_01_num1(str, desired);
         //System.out.println(num0);
-        //int num1 = strn.num2(str, desired);
+        //int num1 = strn.legalStr_biaoshifu09(str, desired);
         //System.out.println(num1);
 
 
         //int arr [] = {1,2,100,4};
         //        //int num1 = new getArr_win1().win1(arr);
         //        //System.out.println(num1);
-        //        //int num2 = new getArr_win1().win2(arr);
-        //        //System.out.println(num2);
+        //        //int legalStr_biaoshifu09 = new getArr_win1().win2(arr);
+        //        //System.out.println(legalStr_biaoshifu09);
 
         //int []arr={3,2,3,1,1,4};
         //int num = new jumpNumLest().jump1(arr);
@@ -112,8 +112,8 @@ public class Main {
         //int num1 = queuq.num1(4);
         //System.out.println(num1);
         //
-        //int num2 = queuq.num2(4);
-        //System.out.println(num2);
+        //int legalStr_biaoshifu09 = queuq.legalStr_biaoshifu09(4);
+        //System.out.println(legalStr_biaoshifu09);
 
     }
 }

@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * Created by huali on 2018/8/15.
  */
-public class hefaString {
+public class legalStringcalResultmyselft {
     //测试不通过，只通过83%，没判断合法，还没考虑大于9的数字
 //(+ (* 2 3) (^ 4))
 //11
@@ -16,8 +16,6 @@ public class hefaString {
         //int temp1 = Integer.valueOf("12");
         //System.out.println(temp0);
         //System.out.println(temp1);
-        //
-        //
 
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class aaazzzDictionary {
     public static void main(String[] args)
     {
-    //    时间复杂度太高，只通过了20%
+    //    时间复杂度太高，只通过了20%，不能先列出来在得到某个位置的数，复杂度高，空间复杂度也高。
     //    Scanner sc = new Scanner(System.in);
     //    int n = sc.nextInt();
     //    int m = sc.nextInt();
@@ -66,7 +66,7 @@ public class aaazzzDictionary {
         //System.out.println(str);
 
 
-            //改进的方法：
+            //改进的方法：直接找规律
             Scanner sc = new Scanner(System.in);
             int n = sc.nextInt();
             int m = sc.nextInt();
@@ -78,30 +78,31 @@ public class aaazzzDictionary {
                 System.out.println(ans);
 
     }
-    static int check(int a, int b, long lim){
-        long ret = 1;
-        if(b * 2 > a)
-            b = a - b;
-        for(int i = 0; i < b; i++) {
-            ret *= (a - i);
-            ret /= (i + 1);
+        static int check(int a, int b, long lim){
+            long ret = 1;
+            if(b * 2 > a)
+                b = a - b;
+            for(int i = 0; i < b; i++) {
+                ret *= (a - i);
+                ret /= (i + 1);
+                if(ret >= lim) return -1;
+            }
             if(ret >= lim) return -1;
+            return (int)ret;  //k超过了最多的字符串排序的个数。
         }
-        if(ret >= lim) return -1;
-        return (int)ret;
-    }
     static String solve(int a, int z, int k){
         String out = "";
         int n = a + z, i, s;
         s = check(a + z, a, (long)k);
         if(s != -1) return out;
+        //s ==-1就没有超过就继续判断。
         for(i = 0; i < n; i++){
             if(a == 0 || z == 0) break;
             s = check(a - 1 + z, a - 1, (long)k);
-            if(s == -1){
+            if(s == -1){  //如果去掉一个a，K依然小于总数的话，那么这一位就是a
                 out += "a";
                 a--;
-            } else {
+            } else { //如果去掉一个a，K大于总数的话，那么这一位就是Z，同时要减去以Z开头的所有组合。
                 k -= s;
                 out += "z";
                 z--;

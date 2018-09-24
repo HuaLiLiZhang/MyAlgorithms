@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by huali on 2018/9/6.
  */
-public class Main1 {
+public class connectGraphMinPath {
     //第一题
     //给定一张包含N个点、N-1条边的无向连通图，节点从1到N编号，每条边的长度均为1。
     // 假设你从1号节点出发并打算遍历所有节点，那么总路程至少是多少？
@@ -23,7 +23,21 @@ public class Main1 {
 //1 2
 //1 3
 //3 4
+
+
     public static void main(String[] args)
+    {
+           
+    }
+
+
+
+
+
+
+
+
+    /*public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         int N =  sc.nextInt();
@@ -34,19 +48,24 @@ public class Main1 {
         {
             int start = sc.nextInt();  //边的第一个结点
             int end = sc.nextInt();   //边的第二个结点。
-            lst[end] = lst[start]+1;//当前结点的深度。
+            lst[end] = lst[start]+1;//当前结点的深度。  数组lst记录从某个点开始的最长联通路径
             sc.nextLine();
         }
         int depth = 0;
         for(int i = 1;i<=N;i++)
         {
-            depth = lst[i]>depth?lst[i]:depth; //找到最大值
+            depth = lst[i]>depth?lst[i]:depth; //找到最大值，所有路径中最长的联通路径
         }
 
-        System.out.println(2*N-2-depth);
+        System.out.println(2*(N-1)-depth);
+        //总路径=2*(N-1)-depth ，代表所有边重复两次，走两次，（边等于点-1，）
+        // 减去最长的一天路径（不重复走），则表示最少走的路径
 
 
-    }
+    }*/
+
+
+
 
 
 
