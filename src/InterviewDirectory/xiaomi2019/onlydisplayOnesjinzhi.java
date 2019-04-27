@@ -36,7 +36,7 @@ public class onlydisplayOnesjinzhi {
 //END
 //None
 
-    public static void main(String[] args)
+   /* public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
         List<String> list = new ArrayList<>();
@@ -89,11 +89,11 @@ public class onlydisplayOnesjinzhi {
         }
         if(count==0)
             System.out.println("None");
-    }
+    }*/
 
 
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             List<String> list = new ArrayList<>();
 
@@ -107,6 +107,7 @@ public class onlydisplayOnesjinzhi {
             for(int i = 0;i<shuzhi.length;i++){
                 String[] temp = list.get(i).split("#");
                 shuzhi[i] = Integer.parseInt(temp[1],Integer.parseInt(temp[0]));
+                //parseInt(String s, int radix)直接就是进制转换后的十进制的数字
             }
 
             List<Integer> index = new ArrayList<>();
@@ -132,5 +133,5 @@ public class onlydisplayOnesjinzhi {
                     System.out.println(list.get(i));
                 }
             }
-        }*/
+        }
 }

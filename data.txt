@@ -1,0 +1,11 @@
+String
+data
+int
+bool
+char
+long
+float
+double
+short
+byte
+hello WebClient this is from WebServer
